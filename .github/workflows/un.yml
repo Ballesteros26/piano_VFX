@@ -1,0 +1,232 @@
+# -----------------------------------------------------------------------------
+# 工作流：智能解压多种常见格式压缩包
+# - 自动分析压缩包内部目录结构，决定是否创建同名文件夹
+# - 仅含单个顶层目录时直接解压，避免多余嵌套
+# - 多个顶层条目或单文件时创建同名文件夹，防止文件散落
+# - 并发锁 + push 前 rebase 防止竞态
+# -----------------------------------------------------------------------------
+
+name: 智能解压多种常见格式压缩包
+
+on:
+  push:
+    branches: [main, master, GM82]
+    paths:
+      - '**.zip'
+      - '**.7z'
+      - '**.rar'
+      - '**.tar'
+      - '**.tar.gz'
+      - '**.tgz'
+      - '**.tar.bz2'
+      - '**.tar.xz'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract_all_archives:
+    runs-on: ubuntu-22.04
+    if: github.actor != 'github-actions[bot]'
+    concurrency:
+      group: extract-archives-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装解压依赖
+        run: sudo apt-get update -y && sudo apt-get install -y p7zip-full unrar
+
+      - name: 智能解压压缩包
+        run: |
+          mapfile -t ARCHIVES < <(
+            find . -type f -not -path './.git/*' \
+              | grep -iE '\.(zip|7z|rar|tar\.gz|tar\.bz2|tar\.xz|tar|tgz)$'
+          )
+          if [ "${#ARCHIVES[@]}" -eq 0 ]; then
+            echo "未找到压缩文件。"
+            exit 0
+          fi
+          echo "找到 ${#ARCHIVES[@]} 个压缩文件。"
+          echo ""
+
+          SUCC=0
+          FAIL=0
+
+          for FILE in "${ARCHIVES[@]}"; do
+            DIR="$(dirname "$FILE")"
+            FNAME="$(basename "$FILE")"
+            BASE="$(echo "$FNAME" | sed -E 's/\.(tar\.(gz|bz2|xz)|tgz|zip|7z|rar)$//i')"
+            LOWER="$(echo "$FNAME" | tr '[:upper:]' '[:lower:]')"
+
+            # ── ① 确定格式 ────────────────────────────────────────────
+            FMT=""
+            case "$LOWER" in
+              *.zip)          FMT="zip"     ;;
+              *.7z)           FMT="7z"      ;;
+              *.rar)          FMT="rar"     ;;
+              *.tar.gz|*.tgz) FMT="tar.gz"  ;;
+              *.tar.bz2)      FMT="tar.bz2" ;;
+              *.tar.xz)       FMT="tar.xz"  ;;
+              *.tar)          FMT="tar"     ;;
+              *) echo "[$FNAME] 未知格式，跳过"; continue ;;
+            esac
+
+            echo "────────────────────────────────"
+            echo "  文件: $FNAME"
+            echo "  格式: $FMT"
+
+            # ── ② 读取压缩包内文件列表 ────────────────────────────────
+            #    每行一个路径；目录以 / 结尾（tar 天然如此，7z 通过属性判断补上）
+            LIST=""
+            case "$FMT" in
+              zip)
+                LIST=$(unzip -Z1 "$FILE" 2>/dev/null)
+                ;;
+              7z|rar)
+                # 用 7z 的技术列表（-slt）逐条读取 Path 和 Attributes
+                # Attributes 首字母为 D → 目录 → 追加 /
+                LIST=$(7z l -slt "$FILE" 2>/dev/null | awk '
+                  /^-{5,}/ { f=1; next }
+                  f && /^Path = / {
+                    if (p != "") print p          # 上一条无 Attributes，按文件处理
+                    p = ""; sub(/^Path = /, "", p)
+                  }
+                  f && /^Attributes = / {
+                    a = $0; sub(/^Attributes = /, "", a)
+                    if (p != "") {
+                      if (substr(a, 1, 1) == "D") print p "/"
+                      else print p
+                    }
+                    p = ""
+                  }
+                  END { if (p != "") print p }
+                ')
+                # RAR 回退：若 7z 无法解析，用 unrar 输出
+                if [ "$FMT" = "rar" ] && [ -z "$LIST" ]; then
+                  LIST=$(unrar l "$FILE" 2>/dev/null | awk '
+                    /Name/ && /Size/ { pos = index($0, "Name"); next }
+                    pos > 0 && /^-+/ { sep++; next }
+                    pos > 0 && sep == 1 {
+                      n = substr($0, pos)
+                      sub(/^[[:space:]]+/, "", n)
+                      sub(/[[:space:]]+$/, "", n)
+                      if (n != "") print n
+                    }
+                  ')
+                fi
+                ;;
+              *)
+                LIST=$(tar -tf "$FILE" 2>/dev/null)
+                ;;
+            esac
+
+            # 统一路径分隔符 / 去除 ./ 前缀 / 去空行
+            LIST=$(echo "$LIST" | tr '\\' '/' | sed 's|^\./||' | sed '/^[[:space:]]*$/d')
+
+            # ── ③ 智能判断解压模式 ────────────────────────────────────
+            #
+            #   唯一顶层条目 && 是目录（含子路径）  →  直接解压到父目录（FLAT）
+            #   唯一顶层条目 && 是单文件            →  创建同名文件夹
+            #   多个顶层条目                        →  创建同名文件夹
+            #   无法读取列表                        →  创建同名文件夹（安全兜底）
+            #
+            DEST=""
+            FLAT=false
+            TOPDIR=""
+
+            if [ -z "$LIST" ]; then
+              echo "  结构: 无法读取 → 创建文件夹 [$BASE]"
+              DEST="$DIR/$BASE"
+              mkdir -p "$DEST"
+            else
+              # 提取去重后的顶层名称
+              TOPS=$(echo "$LIST" | while IFS= read -r L; do
+                t="${L%%/*}"
+                [ -n "$t" ] && echo "$t"
+              done | sort -u)
+              NTOP=$(echo "$TOPS" | wc -l | tr -d ' ')
+
+              if [ "$NTOP" -eq 1 ]; then
+                TOPDIR="$TOPS"
+
+                # 检查该条目是否有子路径（即它是目录而非孤立文件）
+                IS_DIR=false
+                if echo "$LIST" | awk -v p="$TOPDIR/" '
+                  index($0, p) == 1 { f=1; exit }
+                  END { exit !f }
+                '; then
+                  IS_DIR=true
+                fi
+
+                if $IS_DIR; then
+                  # 安全检查：目标目录是否已存在（防止覆盖已有内容）
+                  if [ -d "$DIR/$TOPDIR" ]; then
+                    echo "  结构: 单层目录 [$TOPDIR]（目标已存在）→ 文件夹 [$BASE]"
+                    DEST="$DIR/$BASE"
+                    mkdir -p "$DEST"
+                  else
+                    echo "  结构: 单层目录 [$TOPDIR] → 直接解压到父目录"
+                    DEST="$DIR"
+                    FLAT=true
+                  fi
+                else
+                  echo "  结构: 单文件 → 文件夹 [$BASE]"
+                  DEST="$DIR/$BASE"
+                  mkdir -p "$DEST"
+                fi
+              else
+                echo "  结构: $NTOP 个顶层条目 → 文件夹 [$BASE]"
+                DEST="$DIR/$BASE"
+                mkdir -p "$DEST"
+              fi
+            fi
+
+            # ── ④ 执行解压 ────────────────────────────────────────────
+            EX_OK=true
+            case "$FMT" in
+              zip)     unzip -o "$FILE" -d "$DEST"   || EX_OK=false ;;
+              7z)      7z x "$FILE" -o"$DEST" -y     || EX_OK=false ;;
+              rar)     unrar x -o+ "$FILE" "$DEST/"   || EX_OK=false ;;
+              tar.gz)  tar -xzf "$FILE" -C "$DEST"    || EX_OK=false ;;
+              tar.bz2) tar -xjf "$FILE" -C "$DEST"    || EX_OK=false ;;
+              tar.xz)  tar -xJf "$FILE" -C "$DEST"    || EX_OK=false ;;
+              tar)     tar -xf  "$FILE" -C "$DEST"    || EX_OK=false ;;
+            esac
+
+            # ── ⑤ 处理结果 ────────────────────────────────────────────
+            if $EX_OK; then
+              echo "  → 解压成功"
+              if $FLAT && [ -n "$TOPDIR" ]; then
+                git add --force "$DIR/$TOPDIR"
+              else
+                git add --force "$DEST"
+              fi
+              rm "$FILE" && git add "$FILE"
+              SUCC=$((SUCC + 1))
+            else
+              echo "  → 解压失败，已跳过"
+              # 清理因失败而留下的空文件夹
+              $FLAT || rmdir "$DEST" 2>/dev/null
+              FAIL=$((FAIL + 1))
+            fi
+            echo ""
+          done
+
+          echo "=============================="
+          echo "完成: 成功 $SUCC | 失败 $FAIL | 共 ${#ARCHIVES[@]}"
+
+      - name: 提交变动
+        run: |
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --staged --quiet; then
+            git commit -m "Chore: 智能解压并删除多种格式压缩包"
+            git pull --rebase origin main
+            git push
+          else
+            echo "没有文件变动需要提交。"
+          fi
