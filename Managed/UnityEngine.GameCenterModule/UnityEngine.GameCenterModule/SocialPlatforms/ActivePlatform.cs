@@ -1,0 +1,37 @@
+﻿using System;
+
+namespace UnityEngine.SocialPlatforms
+{
+	// Token: 0x02000006 RID: 6
+	internal static class ActivePlatform
+	{
+		// Token: 0x17000004 RID: 4
+		// (get) Token: 0x0600002A RID: 42 RVA: 0x00002CE8 File Offset: 0x00000EE8
+		// (set) Token: 0x0600002B RID: 43 RVA: 0x00002D15 File Offset: 0x00000F15
+		internal static ISocialPlatform Instance
+		{
+			get
+			{
+				bool flag = ActivePlatform._active == null;
+				if (flag)
+				{
+					ActivePlatform._active = ActivePlatform.SelectSocialPlatform();
+				}
+				return ActivePlatform._active;
+			}
+			set
+			{
+				ActivePlatform._active = value;
+			}
+		}
+
+		// Token: 0x0600002C RID: 44 RVA: 0x00002D20 File Offset: 0x00000F20
+		private static ISocialPlatform SelectSocialPlatform()
+		{
+			return new Local();
+		}
+
+		// Token: 0x0400000B RID: 11
+		private static ISocialPlatform _active;
+	}
+}

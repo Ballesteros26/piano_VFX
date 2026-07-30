@@ -1,0 +1,24 @@
+﻿using System;
+using System.Dynamic.Utils;
+
+namespace System.Linq.Expressions
+{
+	/// <summary>Represents a visitor or rewriter for dynamic expression trees.</summary>
+	// Token: 0x0200026C RID: 620
+	public class DynamicExpressionVisitor : ExpressionVisitor
+	{
+		/// <summary>Visits the children of the <see cref="T:System.Linq.Expressions.DynamicExpression" />.</summary>
+		/// <returns>Returns <see cref="T:System.Linq.Expressions.Expression" />, the modified expression, if it or any subexpression is modified; otherwise, returns the original expression.</returns>
+		/// <param name="node">The expression to visit.</param>
+		// Token: 0x06001147 RID: 4423 RVA: 0x00038908 File Offset: 0x00036B08
+		protected internal override Expression VisitDynamic(DynamicExpression node)
+		{
+			Expression[] array = ExpressionVisitorUtils.VisitArguments(this, node);
+			if (array == null)
+			{
+				return node;
+			}
+			return node.Rewrite(array);
+		}
+	}
+}

@@ -1,0 +1,42 @@
+﻿using System;
+
+namespace Mono.WebBrowser
+{
+	// Token: 0x02000007 RID: 7
+	[Flags]
+	public enum DialogButtonFlags
+	{
+		// Token: 0x04000035 RID: 53
+		BUTTON_POS_0 = 1,
+		// Token: 0x04000036 RID: 54
+		BUTTON_POS_1 = 256,
+		// Token: 0x04000037 RID: 55
+		BUTTON_POS_2 = 65536,
+		// Token: 0x04000038 RID: 56
+		BUTTON_TITLE_OK = 1,
+		// Token: 0x04000039 RID: 57
+		BUTTON_TITLE_CANCEL = 2,
+		// Token: 0x0400003A RID: 58
+		BUTTON_TITLE_YES = 3,
+		// Token: 0x0400003B RID: 59
+		BUTTON_TITLE_NO = 4,
+		// Token: 0x0400003C RID: 60
+		BUTTON_TITLE_SAVE = 5,
+		// Token: 0x0400003D RID: 61
+		BUTTON_TITLE_DONT_SAVE = 6,
+		// Token: 0x0400003E RID: 62
+		BUTTON_TITLE_REVERT = 7,
+		// Token: 0x0400003F RID: 63
+		BUTTON_TITLE_IS_STRING = 127,
+		// Token: 0x04000040 RID: 64
+		BUTTON_POS_0_DEFAULT = 0,
+		// Token: 0x04000041 RID: 65
+		BUTTON_POS_1_DEFAULT = 16777216,
+		// Token: 0x04000042 RID: 66
+		BUTTON_POS_2_DEFAULT = 33554432,
+		// Token: 0x04000043 RID: 67
+		BUTTON_DELAY_ENABLE = 67108864,
+		// Token: 0x04000044 RID: 68
+		STD_OK_CANCEL_BUTTONS = 513
+	}
+}

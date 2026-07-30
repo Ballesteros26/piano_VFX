@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{721D46F5-9047-4692-8BB1-0C07385F49BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.Rendering.VirtualTexturing</RootNamespace>
+    <AssemblyName>UnityEngine.VirtualTexturingModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Debugging.cs" />
+    <Compile Include="EditorHelpers.cs" />
+    <Compile Include="Procedural\Binding.cs" />
+    <Compile Include="Procedural\CPUTextureStack.cs" />
+    <Compile Include="Procedural\CPUTextureStackRequestLayerParameters.cs" />
+    <Compile Include="Procedural\CPUTextureStackRequestParameters.cs" />
+    <Compile Include="Procedural\CreationParameters.cs" />
+    <Compile Include="Procedural\GPUTextureStack.cs" />
+    <Compile Include="Procedural\GPUTextureStackRequestLayerParameters.cs" />
+    <Compile Include="Procedural\GPUTextureStackRequestParameters.cs" />
+    <Compile Include="Procedural\ProceduralTextureStackRequestStatus.cs" />
+    <Compile Include="Procedural\RequestHandlePayload.cs" />
+    <Compile Include="Procedural\RequestStatus.cs" />
+    <Compile Include="Procedural\TextureStackBase.cs" />
+    <Compile Include="Procedural\TextureStackRequestHandle.cs" />
+    <Compile Include="Procedural\TextureStackRequestLayerUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolver.cs" />
+    <Compile Include="System.cs" />
+    <Compile Include="VirtualTexturingCacheUsage.cs" />
+    <Compile Include="VirtualTexturingCPUCacheSettings.cs" />
+    <Compile Include="VirtualTexturingGPUCacheSettings.cs" />
+    <Compile Include="VirtualTexturingGPUCacheSizeOverride.cs" />
+    <Compile Include="VirtualTexturingSettings.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

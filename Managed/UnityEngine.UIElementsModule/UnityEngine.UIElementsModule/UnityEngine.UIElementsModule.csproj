@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F621E41D-53B5-4F0A-8C01-6F4DAE9E1045}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.UIElements</RootNamespace>
+    <AssemblyName>UnityEngine.UIElementsModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\..\..\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>..\..\..\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressMode.cs" />
+    <Compile Include="Align.cs" />
+    <Compile Include="AlternatingRowBackground.cs" />
+    <Compile Include="AttachToPanelEvent.cs" />
+    <Compile Include="Background.cs" />
+    <Compile Include="BaseField.cs" />
+    <Compile Include="BaseFieldTraits.cs" />
+    <Compile Include="BaseSlider.cs" />
+    <Compile Include="BaseVisualElementPanel.cs" />
+    <Compile Include="BaseVisualTreeHierarchyTrackerUpdater.cs" />
+    <Compile Include="BaseVisualTreeUpdater.cs" />
+    <Compile Include="BindableElement.cs" />
+    <Compile Include="BlurEvent.cs" />
+    <Compile Include="Box.cs" />
+    <Compile Include="Button.cs" />
+    <Compile Include="CallbackEventHandler.cs" />
+    <Compile Include="CallbackPhase.cs" />
+    <Compile Include="ChangeEvent.cs" />
+    <Compile Include="ClampedDragger.cs" />
+    <Compile Include="Clickable.cs" />
+    <Compile Include="ClickDetector.cs" />
+    <Compile Include="ClickEvent.cs" />
+    <Compile Include="CommandEventBase.cs" />
+    <Compile Include="CommandEventDispatchingStrategy.cs" />
+    <Compile Include="ComputedStyle.cs" />
+    <Compile Include="ContextClickEvent.cs" />
+    <Compile Include="ContextType.cs" />
+    <Compile Include="ContextualMenuManager.cs" />
+    <Compile Include="ContextualMenuManipulator.cs" />
+    <Compile Include="ContextualMenuPopulateEvent.cs" />
+    <Compile Include="CreationContext.cs" />
+    <Compile Include="Cursor.cs" />
+    <Compile Include="CursorManager.cs" />
+    <Compile Include="CursorPositionStylePainterParameters.cs" />
+    <Compile Include="CustomStyleProperty.cs" />
+    <Compile Include="CustomStyleResolvedEvent.cs" />
+    <Compile Include="DebuggerEventDispatchingStrategy.cs" />
+    <Compile Include="DefaultDispatchingStrategy.cs" />
+    <Compile Include="DefaultDragAndDropClient.cs" />
+    <Compile Include="DetachFromPanelEvent.cs" />
+    <Compile Include="DispatchMode.cs" />
+    <Compile Include="DisplayStyle.cs" />
+    <Compile Include="DisposeHelper.cs" />
+    <Compile Include="DragAndDropEventBase.cs" />
+    <Compile Include="DragAndDropPosition.cs" />
+    <Compile Include="DragAndDropUtility.cs" />
+    <Compile Include="DragEnterEvent.cs" />
+    <Compile Include="DragEventsProcessor.cs" />
+    <Compile Include="DragExitedEvent.cs" />
+    <Compile Include="DragLeaveEvent.cs" />
+    <Compile Include="DragPerformEvent.cs" />
+    <Compile Include="DragUpdatedEvent.cs" />
+    <Compile Include="DragVisualMode.cs" />
+    <Compile Include="DropdownMenu.cs" />
+    <Compile Include="DropdownMenuAction.cs" />
+    <Compile Include="DropdownMenuEventInfo.cs" />
+    <Compile Include="DropdownMenuItem.cs" />
+    <Compile Include="DropdownMenuSeparator.cs" />
+    <Compile Include="ElementUnderPointer.cs" />
+    <Compile Include="EventBase.2.cs" />
+    <Compile Include="EventBase.cs" />
+    <Compile Include="EventCallback.2.cs" />
+    <Compile Include="EventCallback.cs" />
+    <Compile Include="EventCallbackFunctor.2.cs" />
+    <Compile Include="EventCallbackFunctor.cs" />
+    <Compile Include="EventCallbackFunctorBase.cs" />
+    <Compile Include="EventCallbackList.cs" />
+    <Compile Include="EventCallbackListPool.cs" />
+    <Compile Include="EventCallbackRegistry.cs" />
+    <Compile Include="EventDebugger.cs" />
+    <Compile Include="EventDebuggerCallTrace.cs" />
+    <Compile Include="EventDebuggerDefaultActionTrace.cs" />
+    <Compile Include="EventDebuggerEventRecord.cs" />
+    <Compile Include="EventDebuggerLogCall.cs" />
+    <Compile Include="EventDebuggerLogExecuteDefaultAction.cs" />
+    <Compile Include="EventDebuggerLogIMGUICall.cs" />
+    <Compile Include="EventDebuggerPathTrace.cs" />
+    <Compile Include="EventDebuggerTrace.cs" />
+    <Compile Include="EventDispatcher.cs" />
+    <Compile Include="EventDispatcherGate.cs" />
+    <Compile Include="EventDispatchUtilities.cs" />
+    <Compile Include="ExecuteCommandEvent.cs" />
+    <Compile Include="Experimental\Easing.cs" />
+    <Compile Include="Experimental\ITransitionAnimations.cs" />
+    <Compile Include="Experimental\IValueAnimation.cs" />
+    <Compile Include="Experimental\IValueAnimationUpdate.cs" />
+    <Compile Include="Experimental\Lerp.cs" />
+    <Compile Include="Experimental\StyleValues.cs" />
+    <Compile Include="Experimental\ValueAnimation.cs" />
+    <Compile Include="FlexDirection.cs" />
+    <Compile Include="Focusable.cs" />
+    <Compile Include="FocusChangeDirection.cs" />
+    <Compile Include="FocusController.cs" />
+    <Compile Include="FocusEvent.cs" />
+    <Compile Include="FocusEventBase.cs" />
+    <Compile Include="FocusInEvent.cs" />
+    <Compile Include="FocusOutEvent.cs" />
+    <Compile Include="Foldout.cs" />
+    <Compile Include="GeometryChangedEvent.cs" />
+    <Compile Include="GetViewDataDictionary.cs" />
+    <Compile Include="GlobalCallbackRegistry.cs" />
+    <Compile Include="GradientSettings.cs" />
+    <Compile Include="GradientType.cs" />
+    <Compile Include="HelpBox.cs" />
+    <Compile Include="HelpBoxMessageType.cs" />
+    <Compile Include="HierarchyChangeType.cs" />
+    <Compile Include="HierarchyEvent.cs" />
+    <Compile Include="IBindable.cs" />
+    <Compile Include="IBinding.cs" />
+    <Compile Include="IBindingExtensions.cs" />
+    <Compile Include="IChangeEvent.cs" />
+    <Compile Include="ICommandEvent.cs" />
+    <Compile Include="ICursorManager.cs" />
+    <Compile Include="ICustomStyle.cs" />
+    <Compile Include="IDataWatchHandle.cs" />
+    <Compile Include="IDataWatchService.cs" />
+    <Compile Include="IDragAndDrop.cs" />
+    <Compile Include="IDragAndDropController.cs" />
+    <Compile Include="IDragAndDropData.cs" />
+    <Compile Include="IDragAndDropEvent.cs" />
+    <Compile Include="IEventDispatchingStrategy.cs" />
+    <Compile Include="IEventHandler.cs" />
+    <Compile Include="IExperimentalFeatures.cs" />
+    <Compile Include="IFocusEvent.cs" />
+    <Compile Include="IFocusRing.cs" />
+    <Compile Include="IKeyboardEvent.cs" />
+    <Compile Include="IListDragAndDropArgs.cs" />
+    <Compile Include="IListViewDragAndDropController.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="IManipulator.cs" />
+    <Compile Include="IMGUIContainer.cs" />
+    <Compile Include="IMGUIEvent.cs" />
+    <Compile Include="IMGUIEventDispatchingStrategy.cs" />
+    <Compile Include="ImmediateModeElement.cs" />
+    <Compile Include="ImmediateModeException.cs" />
+    <Compile Include="IMouseCaptureEvent.cs" />
+    <Compile Include="IMouseEvent.cs" />
+    <Compile Include="IMouseEventInternal.cs" />
+    <Compile Include="InheritedData.cs" />
+    <Compile Include="InlineStyleAccess.cs" />
+    <Compile Include="INotifyValueChanged.cs" />
+    <Compile Include="INotifyValueChangedExtensions.cs" />
+    <Compile Include="InputEvent.cs" />
+    <Compile Include="IPanel.cs" />
+    <Compile Include="IPanelChangedEvent.cs" />
+    <Compile Include="IPointerCaptureEvent.cs" />
+    <Compile Include="IPointerEvent.cs" />
+    <Compile Include="IPointerEventInternal.cs" />
+    <Compile Include="IReorderable.cs" />
+    <Compile Include="IResolvedStyle.cs" />
+    <Compile Include="IScheduler.cs" />
+    <Compile Include="ISerializableJsonDictionary.cs" />
+    <Compile Include="IStyle.cs" />
+    <Compile Include="IStylePainter.cs" />
+    <Compile Include="IStyleValue.cs" />
+    <Compile Include="ItemMoveArgs.cs" />
+    <Compile Include="ITextElement.cs" />
+    <Compile Include="ITextInputField.cs" />
+    <Compile Include="ITransform.cs" />
+    <Compile Include="ITreeViewItem.cs" />
+    <Compile Include="IUIElementsUtility.cs" />
+    <Compile Include="IUxmlAttributes.cs" />
+    <Compile Include="IUxmlFactory.cs" />
+    <Compile Include="IVisualElementPanelActivatable.cs" />
+    <Compile Include="IVisualElementScheduledItem.cs" />
+    <Compile Include="IVisualElementScheduler.cs" />
+    <Compile Include="IVisualTreeUpdater.cs" />
+    <Compile Include="Justify.cs" />
+    <Compile Include="KeyboardEventBase.cs" />
+    <Compile Include="KeyboardEventDispatchingStrategy.cs" />
+    <Compile Include="KeyboardTextEditorEventHandler.cs" />
+    <Compile Include="KeyDownEvent.cs" />
+    <Compile Include="KeyUpEvent.cs" />
+    <Compile Include="Label.cs" />
+    <Compile Include="Length.cs" />
+    <Compile Include="LengthUnit.cs" />
+    <Compile Include="ListDragAndDropArgs.cs" />
+    <Compile Include="ListView.cs" />
+    <Compile Include="ListViewDragger.cs" />
+    <Compile Include="ListViewDraggerExtension.cs" />
+    <Compile Include="ListViewReorderableDragAndDropController.cs" />
+    <Compile Include="LoadResourceFunction.cs" />
+    <Compile Include="Manipulator.cs" />
+    <Compile Include="ManipulatorActivationFilter.cs" />
+    <Compile Include="MeshGenerationContext.cs" />
+    <Compile Include="MeshGenerationContextUtils.cs" />
+    <Compile Include="MeshWriteData.cs" />
+    <Compile Include="MinMaxSlider.cs" />
+    <Compile Include="MouseButton.cs" />
+    <Compile Include="MouseCaptureController.cs" />
+    <Compile Include="MouseCaptureDispatchingStrategy.cs" />
+    <Compile Include="MouseCaptureEvent.cs" />
+    <Compile Include="MouseCaptureEventBase.cs" />
+    <Compile Include="MouseCaptureOutEvent.cs" />
+    <Compile Include="MouseDownEvent.cs" />
+    <Compile Include="MouseEnterEvent.cs" />
+    <Compile Include="MouseEnterWindowEvent.cs" />
+    <Compile Include="MouseEventBase.cs" />
+    <Compile Include="MouseEventDispatchingStrategy.cs" />
+    <Compile Include="MouseEventsHelper.cs" />
+    <Compile Include="MouseLeaveEvent.cs" />
+    <Compile Include="MouseLeaveWindowEvent.cs" />
+    <Compile Include="MouseManipulator.cs" />
+    <Compile Include="MouseMoveEvent.cs" />
+    <Compile Include="MouseOutEvent.cs" />
+    <Compile Include="MouseOverEvent.cs" />
+    <Compile Include="MouseUpEvent.cs" />
+    <Compile Include="NonInheritedData.cs" />
+    <Compile Include="ObjectPool.cs" />
+    <Compile Include="Overflow.cs" />
+    <Compile Include="OverflowClipBox.cs" />
+    <Compile Include="OverflowInternal.cs" />
+    <Compile Include="Panel.cs" />
+    <Compile Include="PanelChangedEventBase.cs" />
+    <Compile Include="PanelClearFlags.cs" />
+    <Compile Include="PickingMode.cs" />
+    <Compile Include="PointerCancelEvent.cs" />
+    <Compile Include="PointerCaptureDispatchingStrategy.cs" />
+    <Compile Include="PointerCaptureEvent.cs" />
+    <Compile Include="PointerCaptureEventBase.cs" />
+    <Compile Include="PointerCaptureHelper.cs" />
+    <Compile Include="PointerCaptureOutEvent.cs" />
+    <Compile Include="PointerClickable.cs" />
+    <Compile Include="PointerDeviceState.cs" />
+    <Compile Include="PointerDispatchState.cs" />
+    <Compile Include="PointerDownEvent.cs" />
+    <Compile Include="PointerEnterEvent.cs" />
+    <Compile Include="PointerEventBase.cs" />
+    <Compile Include="PointerEventDispatchingStrategy.cs" />
+    <Compile Include="PointerEventsHelper.cs" />
+    <Compile Include="PointerId.cs" />
+    <Compile Include="PointerLeaveEvent.cs" />
+    <Compile Include="PointerManipulator.cs" />
+    <Compile Include="PointerMoveEvent.cs" />
+    <Compile Include="PointerOutEvent.cs" />
+    <Compile Include="PointerOverEvent.cs" />
+    <Compile Include="PointerStationaryEvent.cs" />
+    <Compile Include="PointerType.cs" />
+    <Compile Include="PointerUpEvent.cs" />
+    <Compile Include="PopupWindow.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="ProjectionUtils.cs" />
+    <Compile Include="PropagationPaths.cs" />
+    <Compile Include="PropagationPhase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PseudoStates.cs" />
+    <Compile Include="RenderHints.cs" />
+    <Compile Include="RepaintData.cs" />
+    <Compile Include="RepeatButton.cs" />
+    <Compile Include="RuleMatcher.cs" />
+    <Compile Include="RuntimePanel.cs" />
+    <Compile Include="SavePersistentViewData.cs" />
+    <Compile Include="ScheduledItem.cs" />
+    <Compile Include="Scroller.cs" />
+    <Compile Include="ScrollView.cs" />
+    <Compile Include="ScrollViewMode.cs" />
+    <Compile Include="SelectionType.cs" />
+    <Compile Include="Slider.cs" />
+    <Compile Include="SliderDirection.cs" />
+    <Compile Include="SliderInt.cs" />
+    <Compile Include="Spacing.cs" />
+    <Compile Include="StartDragArgs.cs" />
+    <Compile Include="StringUtils.cs" />
+    <Compile Include="StringUtilsExtensions.cs" />
+    <Compile Include="StyleBackground.cs" />
+    <Compile Include="StyleCache.cs" />
+    <Compile Include="StyleColor.cs" />
+    <Compile Include="StyleComplexSelector.cs" />
+    <Compile Include="StyleCursor.cs" />
+    <Compile Include="StyleDebug.cs" />
+    <Compile Include="StyleEnum.cs" />
+    <Compile Include="StyleFloat.cs" />
+    <Compile Include="StyleFont.cs" />
+    <Compile Include="StyleInt.cs" />
+    <Compile Include="StyleKeyword.cs" />
+    <Compile Include="StyleLength.cs" />
+    <Compile Include="StyleMatchingContext.cs" />
+    <Compile Include="StyleProperty.cs" />
+    <Compile Include="StyleRule.cs" />
+    <Compile Include="StyleSelector.cs" />
+    <Compile Include="StyleSelectorPart.cs" />
+    <Compile Include="StyleSelectorRelationship.cs" />
+    <Compile Include="StyleSelectorType.cs" />
+    <Compile Include="StyleSheet.cs" />
+    <Compile Include="StyleSheets\BaseStyleMatcher.cs" />
+    <Compile Include="StyleSheets\Dimension.cs" />
+    <Compile Include="StyleSheets\HierarchyTraversal.cs" />
+    <Compile Include="StyleSheets\ImageSource.cs" />
+    <Compile Include="StyleSheets\InitialStyle.cs" />
+    <Compile Include="StyleSheets\MatchResult.cs" />
+    <Compile Include="StyleSheets\MatchResultErrorCode.cs" />
+    <Compile Include="StyleSheets\MatchResultInfo.cs" />
+    <Compile Include="StyleSheets\ScalableImage.cs" />
+    <Compile Include="StyleSheets\SelectorMatchRecord.cs" />
+    <Compile Include="StyleSheets\ShorthandApplicator.cs" />
+    <Compile Include="StyleSheets\StyleEnumType.cs" />
+    <Compile Include="StyleSheets\StyleMatcher.cs" />
+    <Compile Include="StyleSheets\StylePropertyCache.cs" />
+    <Compile Include="StyleSheets\StylePropertyGroup.cs" />
+    <Compile Include="StyleSheets\StylePropertyId.cs" />
+    <Compile Include="StyleSheets\StylePropertyReader.cs" />
+    <Compile Include="StyleSheets\StylePropertyUtil.cs" />
+    <Compile Include="StyleSheets\StylePropertyValue.cs" />
+    <Compile Include="StyleSheets\StylePropertyValueMatcher.cs" />
+    <Compile Include="StyleSheets\StylePropertyValueParser.cs" />
+    <Compile Include="StyleSheets\StyleSelectorHelper.cs" />
+    <Compile Include="StyleSheets\StyleSheetCache.cs" />
+    <Compile Include="StyleSheets\StyleSheetColor.cs" />
+    <Compile Include="StyleSheets\StyleSheetExtensions.cs" />
+    <Compile Include="StyleSheets\StyleValidationResult.cs" />
+    <Compile Include="StyleSheets\StyleValidationStatus.cs" />
+    <Compile Include="StyleSheets\StyleValidator.cs" />
+    <Compile Include="StyleSheets\StyleValue.cs" />
+    <Compile Include="StyleSheets\Syntax\DataType.cs" />
+    <Compile Include="StyleSheets\Syntax\Expression.cs" />
+    <Compile Include="StyleSheets\Syntax\ExpressionCombinator.cs" />
+    <Compile Include="StyleSheets\Syntax\ExpressionMultiplier.cs" />
+    <Compile Include="StyleSheets\Syntax\ExpressionMultiplierType.cs" />
+    <Compile Include="StyleSheets\Syntax\ExpressionType.cs" />
+    <Compile Include="StyleSheets\Syntax\StyleSyntaxParser.cs" />
+    <Compile Include="StyleSheets\Syntax\StyleSyntaxToken.cs" />
+    <Compile Include="StyleSheets\Syntax\StyleSyntaxTokenizer.cs" />
+    <Compile Include="StyleSheets\Syntax\StyleSyntaxTokenType.cs" />
+    <Compile Include="StyleValueCollection.cs" />
+    <Compile Include="StyleValueExtensions.cs" />
+    <Compile Include="StyleValueFunction.cs" />
+    <Compile Include="StyleValueFunctionExtension.cs" />
+    <Compile Include="StyleValueHandle.cs" />
+    <Compile Include="StyleValueKeyword.cs" />
+    <Compile Include="StyleValueKeywordExtension.cs" />
+    <Compile Include="StyleValueType.cs" />
+    <Compile Include="StyleVariable.cs" />
+    <Compile Include="StyleVariableContext.cs" />
+    <Compile Include="StyleVariableResolver.cs" />
+    <Compile Include="TemplateAsset.cs" />
+    <Compile Include="TemplateContainer.cs" />
+    <Compile Include="TextEditorEngine.cs" />
+    <Compile Include="TextEditorEventHandler.cs" />
+    <Compile Include="TextElement.cs" />
+    <Compile Include="TextField.cs" />
+    <Compile Include="TextHandle.cs" />
+    <Compile Include="TextInputBaseField.cs" />
+    <Compile Include="TextOverflow.cs" />
+    <Compile Include="TextOverflowPosition.cs" />
+    <Compile Include="TimeMsFunction.cs" />
+    <Compile Include="TimerEventScheduler.cs" />
+    <Compile Include="TimerState.cs" />
+    <Compile Include="Toggle.cs" />
+    <Compile Include="TooltipEvent.cs" />
+    <Compile Include="TouchScreenTextEditorEventHandler.cs" />
+    <Compile Include="TreeView.cs" />
+    <Compile Include="TreeViewItem.cs" />
+    <Compile Include="TrickleDown.cs" />
+    <Compile Include="TypedUxmlAttributeDescription.cs" />
+    <Compile Include="UIElementsPackageUtility.cs" />
+    <Compile Include="UIElementsRuntimeUtility.cs" />
+    <Compile Include="UIElementsUtility.cs" />
+    <Compile Include="UIEventRegistration.cs" />
+    <Compile Include="UIRAtlasAllocator.cs" />
+    <Compile Include="UIRAtlasManager.cs" />
+    <Compile Include="UIRLayoutUpdater.cs" />
+    <Compile Include="UIRRepaintUpdater.cs" />
+    <Compile Include="UIRUtility.cs" />
+    <Compile Include="UIR\Alloc.cs" />
+    <Compile Include="UIR\BestFitAllocator.cs" />
+    <Compile Include="UIR\BitmapAllocator32.cs" />
+    <Compile Include="UIR\BMPAlloc.cs" />
+    <Compile Include="UIR\ChainBuilderStats.cs" />
+    <Compile Include="UIR\CommandType.cs" />
+    <Compile Include="UIR\DrawParams.cs" />
+    <Compile Include="UIR\GPUBufferAllocator.cs" />
+    <Compile Include="UIR\GradientRemap.cs" />
+    <Compile Include="UIR\GradientRemapPool.cs" />
+    <Compile Include="UIR\GradientSettingsAtlas.cs" />
+    <Compile Include="UIR\HeapStatistics.cs" />
+    <Compile Include="UIR\Implementation\ClipMethod.cs" />
+    <Compile Include="UIR\Implementation\RenderEvents.cs" />
+    <Compile Include="UIR\Implementation\UIRStylePainter.cs" />
+    <Compile Include="UIR\Implementation\UIRTextUpdatePainter.cs" />
+    <Compile Include="UIR\LinkedPool.cs" />
+    <Compile Include="UIR\LinkedPoolItem.cs" />
+    <Compile Include="UIR\MeshBuilder.cs" />
+    <Compile Include="UIR\MeshHandle.cs" />
+    <Compile Include="UIR\OwnedState.cs" />
+    <Compile Include="UIR\Page.cs" />
+    <Compile Include="UIR\Pool.cs" />
+    <Compile Include="UIR\PoolItem.cs" />
+    <Compile Include="UIR\RenderChain.cs" />
+    <Compile Include="UIR\RenderChainCommand.cs" />
+    <Compile Include="UIR\RenderChainTextEntry.cs" />
+    <Compile Include="UIR\RenderChainVEData.cs" />
+    <Compile Include="UIR\RenderDataDirtyTypeClasses.cs" />
+    <Compile Include="UIR\RenderDataDirtyTypes.cs" />
+    <Compile Include="UIR\State.cs" />
+    <Compile Include="UIR\Tessellation.cs" />
+    <Compile Include="UIR\TextureBlitter.cs" />
+    <Compile Include="UIR\Transform3x4.cs" />
+    <Compile Include="UIR\UIRenderDevice.cs" />
+    <Compile Include="UIR\UIRVEShaderInfoAllocator.cs" />
+    <Compile Include="UIR\VectorImageManager.cs" />
+    <Compile Include="UIR\VectorImageRenderInfo.cs" />
+    <Compile Include="UIR\VectorImageRenderInfoPool.cs" />
+    <Compile Include="UIR\VertexFlags.cs" />
+    <Compile Include="UIR\ViewTransform.cs" />
+    <Compile Include="UQuery.cs" />
+    <Compile Include="UQueryBuilder.cs" />
+    <Compile Include="UQueryExtensions.cs" />
+    <Compile Include="UQueryState.cs" />
+    <Compile Include="UsageHints.cs" />
+    <Compile Include="UxmlAttributeDescription.cs" />
+    <Compile Include="UxmlAttributeOverridesFactory.cs" />
+    <Compile Include="UxmlAttributeOverridesTraits.cs" />
+    <Compile Include="UxmlBoolAttributeDescription.cs" />
+    <Compile Include="UxmlChildElementDescription.cs" />
+    <Compile Include="UxmlColorAttributeDescription.cs" />
+    <Compile Include="UxmlDoubleAttributeDescription.cs" />
+    <Compile Include="UxmlEnumAttributeDescription.cs" />
+    <Compile Include="UxmlEnumeration.cs" />
+    <Compile Include="UxmlFactory.2.cs" />
+    <Compile Include="UxmlFactory.cs" />
+    <Compile Include="UxmlFloatAttributeDescription.cs" />
+    <Compile Include="UxmlGenericAttributeNames.cs" />
+    <Compile Include="UxmlIntAttributeDescription.cs" />
+    <Compile Include="UxmlLongAttributeDescription.cs" />
+    <Compile Include="UxmlRootElementFactory.cs" />
+    <Compile Include="UxmlRootElementTraits.cs" />
+    <Compile Include="UxmlStringAttributeDescription.cs" />
+    <Compile Include="UxmlStyleFactory.cs" />
+    <Compile Include="UxmlStyleTraits.cs" />
+    <Compile Include="UxmlTemplateFactory.cs" />
+    <Compile Include="UxmlTemplateTraits.cs" />
+    <Compile Include="UxmlTraits.cs" />
+    <Compile Include="UxmlTypeAttributeDescription.cs" />
+    <Compile Include="UxmlTypeRestriction.cs" />
+    <Compile Include="UxmlValueBounds.cs" />
+    <Compile Include="UxmlValueMatches.cs" />
+    <Compile Include="ValidateCommandEvent.cs" />
+    <Compile Include="VectorImage.cs" />
+    <Compile Include="VectorImageVertex.cs" />
+    <Compile Include="VersionChangeType.cs" />
+    <Compile Include="Vertex.cs" />
+    <Compile Include="Visibility.cs" />
+    <Compile Include="VisualElement.cs" />
+    <Compile Include="VisualElementAnimationSystem.cs" />
+    <Compile Include="VisualElementAsset.cs" />
+    <Compile Include="VisualElementDebugExtensions.cs" />
+    <Compile Include="VisualElementExtensions.cs" />
+    <Compile Include="VisualElementFactoryRegistry.cs" />
+    <Compile Include="VisualElementFocusChangeDirection.cs" />
+    <Compile Include="VisualElementFocusRing.cs" />
+    <Compile Include="VisualElementListPool.cs" />
+    <Compile Include="VisualElementPanelActivator.cs" />
+    <Compile Include="VisualElementStyleSheetSet.cs" />
+    <Compile Include="VisualElementUtils.cs" />
+    <Compile Include="VisualTreeAsset.cs" />
+    <Compile Include="VisualTreeBindingsUpdater.cs" />
+    <Compile Include="VisualTreeStyleUpdater.cs" />
+    <Compile Include="VisualTreeStyleUpdaterTraversal.cs" />
+    <Compile Include="VisualTreeTransformClipUpdater.cs" />
+    <Compile Include="VisualTreeUpdatePhase.cs" />
+    <Compile Include="VisualTreeUpdater.cs" />
+    <Compile Include="VisualTreeViewDataUpdater.cs" />
+    <Compile Include="WheelEvent.cs" />
+    <Compile Include="WhiteSpace.cs" />
+    <Compile Include="Wrap.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

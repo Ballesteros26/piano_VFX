@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEAD4911-BB4A-4F0B-B422-C92A1E81FF81}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ookii.Dialogs</RootNamespace>
+    <AssemblyName>Ookii.Dialogs</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivationContextSafeHandle.cs" />
+    <Compile Include="AdditionalVisualStyleElements.cs" />
+    <Compile Include="AnimationResource.cs" />
+    <Compile Include="ButtonType.cs" />
+    <Compile Include="ComCtlv6ActivationContext.cs" />
+    <Compile Include="CredentialDialog.cs" />
+    <Compile Include="CredentialException.cs" />
+    <Compile Include="DialogHelper.cs" />
+    <Compile Include="DownlevelTextMode.cs" />
+    <Compile Include="ExpandButtonClickedEventArgs.cs" />
+    <Compile Include="ExtendedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedForm.Designer.cs">
+      <DependentUpon>ExtendedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Glass.cs" />
+    <Compile Include="HyperlinkClickedEventArgs.cs" />
+    <Compile Include="InputDialog.cs" />
+    <Compile Include="InputDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogForm.Designer.cs">
+      <DependentUpon>InputDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interop\CLSIDGuid.cs" />
+    <Compile Include="Interop\ComDlgResources.cs" />
+    <Compile Include="Interop\FileOpenDialogRCW.cs" />
+    <Compile Include="Interop\FileSaveDialogRCW.cs" />
+    <Compile Include="Interop\HRESULT.cs" />
+    <Compile Include="Interop\IFileDialog.cs" />
+    <Compile Include="Interop\IFileDialogControlEvents.cs" />
+    <Compile Include="Interop\IFileDialogCustomize.cs" />
+    <Compile Include="Interop\IFileDialogEvents.cs" />
+    <Compile Include="Interop\IFileOpenDialog.cs" />
+    <Compile Include="Interop\IFileSaveDialog.cs" />
+    <Compile Include="Interop\IIDGuid.cs" />
+    <Compile Include="Interop\IKnownFolder.cs" />
+    <Compile Include="Interop\IKnownFolderManager.cs" />
+    <Compile Include="Interop\IModalWindow.cs" />
+    <Compile Include="Interop\IProgressDialog.cs" />
+    <Compile Include="Interop\IPropertyStore.cs" />
+    <Compile Include="Interop\IShellItem.cs" />
+    <Compile Include="Interop\IShellItemArray.cs" />
+    <Compile Include="Interop\KFIDGuid.cs" />
+    <Compile Include="Interop\KnownFolderManager.cs" />
+    <Compile Include="Interop\KnownFolderManagerRCW.cs" />
+    <Compile Include="Interop\NativeCommonFileDialog.cs" />
+    <Compile Include="Interop\NativeFileOpenDialog.cs" />
+    <Compile Include="Interop\NativeFileSaveDialog.cs" />
+    <Compile Include="Interop\ProgressDialog.cs" />
+    <Compile Include="Interop\ProgressDialogFlags.cs" />
+    <Compile Include="Interop\ProgressDialogRCW.cs" />
+    <Compile Include="Interop\Win32Resources.cs" />
+    <Compile Include="Interop\WindowHandleWrapper.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="OkButtonClickedEventArgs.cs" />
+    <Compile Include="ProgressBarState.cs" />
+    <Compile Include="ProgressBarStyle.cs" />
+    <Compile Include="ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SafeDeviceHandle.cs" />
+    <Compile Include="SafeGDIHandle.cs" />
+    <Compile Include="SafeModuleHandle.cs" />
+    <Compile Include="ShellAnimation.cs" />
+    <Compile Include="TaskDialog.cs" />
+    <Compile Include="TaskDialogButton.cs" />
+    <Compile Include="TaskDialogButtonStyle.cs" />
+    <Compile Include="TaskDialogDesigner.cs" />
+    <Compile Include="TaskDialogIcon.cs" />
+    <Compile Include="TaskDialogItem.cs" />
+    <Compile Include="TaskDialogItemClickedEventArgs.cs" />
+    <Compile Include="TaskDialogItemCollection.cs" />
+    <Compile Include="TaskDialogRadioButton.cs" />
+    <Compile Include="TimerEventArgs.cs" />
+    <Compile Include="VistaFileDialog.cs" />
+    <Compile Include="VistaFileDialogEvents.cs" />
+    <Compile Include="VistaFolderBrowserDialog.cs" />
+    <Compile Include="VistaOpenFileDialog.cs" />
+    <Compile Include="VistaSaveFileDialog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CredentialDialog.bmp" />
+    <EmbeddedResource Include="ExtendedForm.resx">
+      <DependentUpon>ExtendedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputDialog.bmp" />
+    <EmbeddedResource Include="InputDialogForm.resx">
+      <DependentUpon>InputDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressDialog.bmp" />
+    <EmbeddedResource Include="ProgressDialog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialog.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskDialog.bmp" />
+    <EmbeddedResource Include="VistaFolderBrowserDialog.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

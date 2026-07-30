@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Security;
+using System.Security.Permissions;
+using Unity;
+
+namespace System.Diagnostics.Eventing.Reader
+{
+	/// <summary>Contains an array of strings that represent XPath queries for elements in the XML representation of an event, which is based on the Event Schema. The queries in this object are used to extract values from the event.</summary>
+	/// <filterpriority>2</filterpriority>
+	// Token: 0x02000396 RID: 918
+	[HostProtection(SecurityAction.LinkDemand, MayLeakOnAbort = true)]
+	public class EventLogPropertySelector : IDisposable
+	{
+		/// <summary>Initializes a new <see cref="T:System.Diagnostics.Eventing.Reader.EventLogPropertySelector" /> class instance.</summary>
+		/// <param name="propertyQueries">XPath queries used to extract values from the XML representation of the event.</param>
+		/// <filterpriority>2</filterpriority>
+		// Token: 0x06001B20 RID: 6944 RVA: 0x0000220F File Offset: 0x0000040F
+		[SecurityCritical]
+		public EventLogPropertySelector(IEnumerable<string> propertyQueries)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+
+		/// <summary>Releases all the resources used by this object.</summary>
+		/// <filterpriority>2</filterpriority>
+		// Token: 0x06001B21 RID: 6945 RVA: 0x0000220F File Offset: 0x0000040F
+		public void Dispose()
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+
+		/// <summary>Releases the unmanaged resources used by this object, and optionally releases the managed resources.</summary>
+		/// <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+		// Token: 0x06001B22 RID: 6946 RVA: 0x0000220F File Offset: 0x0000040F
+		[SecuritySafeCritical]
+		protected virtual void Dispose(bool disposing)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+	}
+}

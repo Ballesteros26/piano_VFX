@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08143CB2-7FEC-45C2-9247-2D988945612B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assembly-CSharp-firstpass</RootNamespace>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Melanchall\DryWetMidi\Common\CircularBuffer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\ControlName.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\DataTypesUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\DisplayNameAttribute.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\FourBitNumber.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\MathUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\ObjectWrapper.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\Parsing.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\ParsingResult.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\ParsingStatus.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\ParsingUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\ReflectionUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\SevenBitNumber.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\ShortByteParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\SmpteFormat.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\StreamWrapper.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Common\ThrowIfArgument.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\AddAnchorAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\AddChordAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\AddNoteAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\AddPatternAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\AddTextEventAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\AnchorPosition.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\ChordDescriptor.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\ChordSelection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\ChordTransformation.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\MoveToAnchorAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\MoveToTimeAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\NoteDescriptor.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\NoteSelection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\NoteTransformation.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\Pattern.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\PatternAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\PatternActionResult.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\PatternActionState.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\PatternBuilder.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\PatternContext.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\PatternUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\SetGeneralMidi2ProgramAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\SetGeneralMidiProgramAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\SetProgramNumberAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\StepAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\StepBackAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Composing\StepForwardAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ActiveSensingEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ArrayUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\BaseTextEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\BytesToMidiEventConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChannelAftertouchEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChannelEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChannelEventReader.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChannelEventWriter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChannelPrefixEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChunksCollection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChunksConverterFactory.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChunkType.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ChunkTypesCollection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\CompressionPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ContinueEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ControlChangeEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ControlUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\CopyrightNoticeEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\CuePointEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\DecodeTextCallback.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\DeviceNameEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\EndOfTrackEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\EscapeSysExEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\EventReaderFactory.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\EventsCollection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\EventStatusBytes.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\EventType.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\EventTypesCollection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\EventWriterFactory.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ExtraTrackChunkPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\FileUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\HeaderChunk.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\IChunksConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\IEventReader.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\IEventWriter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InstrumentNameEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidChannelEventParameterValueException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidChannelEventParameterValuePolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidChunkSizeException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidChunkSizePolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidMetaEventParameterValueException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidMetaEventParameterValuePolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidMidiTimeCodeComponentException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidSystemCommonEventParameterValueException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\InvalidSystemCommonEventParameterValuePolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\KeySignatureEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\LyricEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MarkerEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MetaEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MetaEventReader.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MetaEventWriter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiChunk.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiChunkEquality.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiChunkEqualityCheckSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiChunkEqualityComparer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiEventEquality.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiEventEqualityCheckSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiEventEqualityComparer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiEventToBytesConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiEventType.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiFile.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiFileEquality.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiFileEqualityCheckSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiFileEqualityComparer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiFileFormat.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiFileUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiReader.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiTimeCodeComponent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiTimeCodeEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiTimeCodeType.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MidiWriter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MissedEndOfTrackEventException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MissedEndOfTrackPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MultiSequenceChunksConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\MultiTrackChunksConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NoHeaderChunkException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NoHeaderChunkPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NormalSysExEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NoteAftertouchEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NoteEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NoteEventUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NotEnoughBytesException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NotEnoughBytesPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NoteOffEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\NoteOnEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\PitchBendEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\PortPrefixEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ProgramChangeEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ProgramNameEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ReaderSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ReadingHandler.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ReadingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\ResetEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SequenceNumberEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SequencerSpecificEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SequenceTrackNameEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SetTempoEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SilentNoteOnPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SingleTrackChunksConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SmfConstants.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SmpteData.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SmpteOffsetEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SmpteTimeDivision.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SongPositionPointerEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SongSelectEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\StandardChunkIds.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\StandardMetaEventStatusBytes.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\StartEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\StopEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SysExEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SysExEventReader.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SysExEventWriter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SystemCommonEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SystemCommonEventReader.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SystemCommonEventWriter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SystemRealTimeEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SystemRealTimeEventReader.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\SystemRealTimeEventWriter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TextEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TicksPerQuarterNoteTimeDivision.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TimeDivision.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TimeDivisionFactory.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TimeSignatureEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TimingClockEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TooManyTrackChunksException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TrackChunk.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TrackChunkUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\TuneRequestEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnexpectedRunningStatusException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnexpectedTrackChunksCountException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnexpectedTrackChunksCountPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownChannelEventAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownChannelEventCallback.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownChannelEventException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownChannelEventInstruction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownChannelEventPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownChunk.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownChunkException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownChunkIdPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownFileFormatException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownFileFormatPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\UnknownMetaEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Core\WritingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\CreateTickGeneratorCallback.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\DevicesConnector.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\DevicesConnectorUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\ErrorOccurredEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\EventCallback.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\HighPrecisionTickGenerator.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\IClockDrivenObject.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\IInputDevice.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\InputDevice.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\InvalidShortEventReceivedEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\InvalidSysExEventReceivedEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\IOutputDevice.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\ITickGenerator.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\Manufacturer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiClock.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiClockSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiDevice.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiDeviceException.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiEventPlayedEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiEventReceivedEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiEventSentEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiInWinApi.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiMessage.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiOutWinApi.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiTimeCodeReceivedEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiTimerWinApi.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\MidiWinApi.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\NoteCallback.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\NotePlaybackData.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\NotePlaybackEventMetadata.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\NotesEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\OutputDevice.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\OutputDeviceType.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\Playback.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackCurrentTime.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackCurrentTimeChangedEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackCurrentTimeWatcher.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackEventCallback.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackEventMetadata.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackEventsComparer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackSnapping.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\PlaybackUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\Recording.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\RecordingEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\RecordingUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\RegularPrecisionTickGenerator.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\SnapPoint.2.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\SnapPoint.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\SnapPointsGroup.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Devices\Volume.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ArbitraryGrid.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\BarBeatFractionTimeSpan.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\BarBeatFractionTimeSpanConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\BarBeatFractionTimeSpanParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\BarBeatTicksTimeSpan.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\BarBeatTicksTimeSpanConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\BarBeatTicksTimeSpanParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\BarBeatUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\Chord.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ChordsCollection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ChordsCollectionChangedEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ChordsCollectionChangedEventHandler.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ChordsManager.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ChordsManagingUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\GetNotesAndRestsUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\GetTimedEventsAndNotesUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\IGrid.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ILengthedObject.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\IMusicalObject.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ITempoMapValuesCache.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ITimedObject.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ITimeSpan.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ITimeSpanConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\LengthConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\LengthedObjectPart.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\LengthedObjectUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MathOperation.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MathTimeSpan.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MathTimeSpanConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MetricTempoMapValuesCache.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MetricTimeSpan.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MetricTimeSpanConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MetricTimeSpanParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MidiFileUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MidiTimeSpan.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MidiTimeSpanConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MidiTimeSpanParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MusicalTimeSpan.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MusicalTimeSpanConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\MusicalTimeSpanParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\Note.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\NoteId.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\NoteIdUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\NotesCollection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\NotesCollectionChangedEventArgs.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\NotesCollectionChangedEventHandler.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\NotesManager.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\NotesManagingUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\NotesReadingHandler.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ResizeNotesUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\Rest.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\RestSeparationPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\SplittedLengthedObject.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\SteppedGrid.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\Tempo.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TempoMap.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TempoMapLine.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TempoMapManager.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TempoMapManagingUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TempoMapReadingHandler.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ThrowIfLengthArgument.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ThrowIfNotesTolerance.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ThrowIfTimeArgument.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimeConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedEventsCollection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedEventsComparer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedEventsManager.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedEventsManagingUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedEventsReadingHandler.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedObjectsCollection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedObjectsComparer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimedObjectUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimeSignature.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimeSpanComparer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimeSpanConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimeSpanMode.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimeSpanType.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TimeSpanUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\TrackChunkUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ValueChange.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Interaction\ValueLine.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\Chord.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ChordParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ChordProgression.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ChordProgressionParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ChordQuality.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ChordsNamesTable.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ChordUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\Interval.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\IntervalDefinition.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\IntervalDirection.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\IntervalParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\IntervalQuality.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\IntervalUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\Note.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\NoteName.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\NoteNameParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\NoteParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\Notes.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\NoteUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\Octave.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\Scale.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ScaleDegree.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ScaleIntervals.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ScaleParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\MusicTheory\ScaleUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2AnalogPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2BrushPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2ElectronicPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2JazzPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2OrchestraPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2PercussionSet.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2PowerPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2Program.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2RoomPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2SfxPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2StandardPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidi2Utilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidiPercussion.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidiProgram.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Standards\GeneralMidiUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\AverageVelocityMerger.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ChordsQuantizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ChordsQuantizerUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ChordsQuantizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ChordsRandomizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ChordsRandomizerUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ChordsRandomizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ChordsSplitter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ChordsSplitterUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ConstantBounds.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvError.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvReader.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvRecord.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvToMidiFileConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvToNotesConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\CsvWriter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\DryWetMidiRecordTypes.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\EventNameGetter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\EventNameGetterProvider.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\EventParametersGetter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\EventParametersGetterProvider.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\EventParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\EventParserProvider.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\EventsNamesProvider.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\FirstVelocityMerger.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\IBounds.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\LastVelocityMerger.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\LengthedObjectsQuantizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\LengthedObjectsQuantizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\LengthedObjectsRandomizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\LengthedObjectsRandomizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\LengthedObjectsSplitter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\LengthedObjectTarget.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\LengthSetter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\MaxVelocityMerger.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\MidiCsvRecordTypes.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\MidiFileCsvConversionSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\MidiFileCsvLayout.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\MidiFileSlicer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\MidiFileSplitter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\MidiFileToCsvConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\MinVelocityMerger.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NoteCsvConversionSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NoteCsvConversionUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NoteFormat.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NoteNumberFormat.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesMerger.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesMergerUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesMergingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesQuantizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesQuantizerUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesQuantizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesRandomizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesRandomizerUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesRandomizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesSplitter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesSplitterUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\NotesToCsvConverter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\ParameterParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\QuantizedTime.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\Quantizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\QuantizingBeyondFixedEndPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\QuantizingBeyondZeroPolicy.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\QuantizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\Randomizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\RandomizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\Record.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\RecordType.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\SliceMidiFileSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimedEventsQuantizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimedEventsQuantizerUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimedEventsQuantizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimedEventsRandomizer.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimedEventsRandomizerUtilities.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimedEventsRandomizingSettings.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimedMidiEvent.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimeProcessingAction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimeProcessingInstruction.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TimeSetter.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\TypeParser.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\VelocityMerger.cs" />
+    <Compile Include="Melanchall\DryWetMidi\Tools\VelocityMergingPolicy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleFileBrowser\FileBrowser.cs" />
+    <Compile Include="SimpleFileBrowser\FileBrowserHelpers.cs" />
+    <Compile Include="SimpleFileBrowser\FileBrowserItem.cs" />
+    <Compile Include="SimpleFileBrowser\FileBrowserMovement.cs" />
+    <Compile Include="SimpleFileBrowser\FileBrowserQuickLink.cs" />
+    <Compile Include="SimpleFileBrowser\FileSystemEntry.cs" />
+    <Compile Include="SimpleFileBrowser\IListViewAdapter.cs" />
+    <Compile Include="SimpleFileBrowser\ListItem.cs" />
+    <Compile Include="SimpleFileBrowser\OnItemClickedHandler.cs" />
+    <Compile Include="SimpleFileBrowser\RecycledListView.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9568381A-A522-483A-821C-A6B97A0C3A98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Web.ApplicationServices</RootNamespace>
+    <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\System.Configuration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationServicesStrings.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\MonoDocumentationNoteAttribute.cs" />
+    <Compile Include="System\MonoExtensionAttribute.cs" />
+    <Compile Include="System\MonoInternalNoteAttribute.cs" />
+    <Compile Include="System\MonoLimitationAttribute.cs" />
+    <Compile Include="System\MonoNotSupportedAttribute.cs" />
+    <Compile Include="System\MonoTODOAttribute.cs" />
+    <Compile Include="System\Web\Configuration\MembershipPasswordCompatibilityMode.cs" />
+    <Compile Include="System\Web\Hosting\CustomLoaderAttribute.cs" />
+    <Compile Include="System\Web\Security\IMembershipAdapter.cs" />
+    <Compile Include="System\Web\Security\IMembershipHelper.cs" />
+    <Compile Include="System\Web\Security\MembershipCreateStatus.cs" />
+    <Compile Include="System\Web\Security\MembershipCreateUserException.cs" />
+    <Compile Include="System\Web\Security\MembershipPasswordException.cs" />
+    <Compile Include="System\Web\Security\MembershipPasswordFormat.cs" />
+    <Compile Include="System\Web\Security\MembershipProvider.cs" />
+    <Compile Include="System\Web\Security\MembershipProviderCollection.cs" />
+    <Compile Include="System\Web\Security\MembershipUser.cs" />
+    <Compile Include="System\Web\Security\MembershipUserCollection.cs" />
+    <Compile Include="System\Web\Security\MembershipValidatePasswordEventHandler.cs" />
+    <Compile Include="System\Web\Security\RoleProvider.cs" />
+    <Compile Include="System\Web\Security\ValidatePasswordEventArgs.cs" />
+    <Compile Include="System\Web\UI\KeyedList.cs" />
+    <Compile Include="System\Web\UI\KeyedListEnumerator.cs" />
+    <Compile Include="Unity\ThrowStub.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

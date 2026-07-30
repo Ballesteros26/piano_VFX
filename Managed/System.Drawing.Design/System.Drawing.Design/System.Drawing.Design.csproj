@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92D7AD9B-1B48-4C35-B9C1-05DD5AC00790}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.Drawing.Design</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\..\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consts.cs" />
+    <Compile Include="Drawing\Design\BitmapEditor.cs" />
+    <Compile Include="Drawing\Design\ColorEditor.cs" />
+    <Compile Include="Drawing\Design\ContentAlignmentEditor.cs" />
+    <Compile Include="Drawing\Design\CursorEditor.cs" />
+    <Compile Include="Drawing\Design\FontEditor.cs" />
+    <Compile Include="Drawing\Design\FontNameEditor.cs" />
+    <Compile Include="Drawing\Design\IconEditor.cs" />
+    <Compile Include="Drawing\Design\ImageEditor.cs" />
+    <Compile Include="Drawing\Design\MetafileEditor.cs" />
+    <Compile Include="Drawing\Design\ToolboxItemContainer.cs" />
+    <Compile Include="Drawing\Design\ToolboxItemCreator.cs" />
+    <Compile Include="Drawing\Design\ToolboxService.cs" />
+    <Compile Include="Locale.cs" />
+    <Compile Include="MonoDocumentationNoteAttribute.cs" />
+    <Compile Include="MonoExtensionAttribute.cs" />
+    <Compile Include="MonoInternalNoteAttribute.cs" />
+    <Compile Include="MonoLimitationAttribute.cs" />
+    <Compile Include="MonoNotSupportedAttribute.cs" />
+    <Compile Include="MonoTODOAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

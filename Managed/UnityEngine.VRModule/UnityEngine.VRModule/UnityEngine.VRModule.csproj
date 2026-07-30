@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CA83F50-A8DD-4D01-B838-A35BE2C8C604}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.VRModule</RootNamespace>
+    <AssemblyName>UnityEngine.VRModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityEngineInternal\XR\WSA\RemoteSpeechAccess.cs" />
+    <Compile Include="UnityEngine\Experimental\XR\Boundary.cs" />
+    <Compile Include="UnityEngine\Internal\VR\VRTestMock.cs" />
+    <Compile Include="UnityEngine\VR\InputTracking.cs" />
+    <Compile Include="UnityEngine\VR\TrackingSpaceType.cs" />
+    <Compile Include="UnityEngine\VR\UserPresenceState.cs" />
+    <Compile Include="UnityEngine\VR\VRDevice.cs" />
+    <Compile Include="UnityEngine\VR\VRDeviceType.cs" />
+    <Compile Include="UnityEngine\VR\VRNode.cs" />
+    <Compile Include="UnityEngine\VR\VRNodeState.cs" />
+    <Compile Include="UnityEngine\VR\VRSettings.cs" />
+    <Compile Include="UnityEngine\VR\VRStats.cs" />
+    <Compile Include="UnityEngine\XR\GameViewRenderMode.cs" />
+    <Compile Include="UnityEngine\XR\TrackingOriginMode.cs" />
+    <Compile Include="UnityEngine\XR\TrackingSpaceType.cs" />
+    <Compile Include="UnityEngine\XR\UserPresenceState.cs" />
+    <Compile Include="UnityEngine\XR\WSA\EmulationMode.cs" />
+    <Compile Include="UnityEngine\XR\WSA\Handedness.cs" />
+    <Compile Include="UnityEngine\XR\WSA\HolographicAutomation.cs" />
+    <Compile Include="UnityEngine\XR\WSA\HolographicEmulationHelper.cs" />
+    <Compile Include="UnityEngine\XR\WSA\HolographicEmulationHelpers.cs" />
+    <Compile Include="UnityEngine\XR\WSA\HolographicRemoting.cs" />
+    <Compile Include="UnityEngine\XR\WSA\HolographicSettings.cs" />
+    <Compile Include="UnityEngine\XR\WSA\HolographicStreamerConnectionFailureReason.cs" />
+    <Compile Include="UnityEngine\XR\WSA\HolographicStreamerConnectionState.cs" />
+    <Compile Include="UnityEngine\XR\WSA\PerceptionRemoting.cs" />
+    <Compile Include="UnityEngine\XR\WSA\PlaymodeInputType.cs" />
+    <Compile Include="UnityEngine\XR\WSA\RemoteDeviceVersion.cs" />
+    <Compile Include="UnityEngine\XR\WSA\SimulatedBody.cs" />
+    <Compile Include="UnityEngine\XR\WSA\SimulatedControllerPress.cs" />
+    <Compile Include="UnityEngine\XR\WSA\SimulatedGesture.cs" />
+    <Compile Include="UnityEngine\XR\WSA\SimulatedHand.cs" />
+    <Compile Include="UnityEngine\XR\WSA\SimulatedHead.cs" />
+    <Compile Include="UnityEngine\XR\WSA\SimulatedSpatialController.cs" />
+    <Compile Include="UnityEngine\XR\XRDevice.cs" />
+    <Compile Include="UnityEngine\XR\XRSettings.cs" />
+    <Compile Include="UnityEngine\XR\XRStats.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

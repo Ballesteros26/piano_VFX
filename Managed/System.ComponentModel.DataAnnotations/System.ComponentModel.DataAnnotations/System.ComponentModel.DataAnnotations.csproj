@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18E7B377-FD8B-45D6-93DF-93EB25241D58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.ComponentModel.DataAnnotations</RootNamespace>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\System.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="AssociatedMetadataTypeTypeDescriptionProvider.cs" />
+    <Compile Include="AssociatedMetadataTypeTypeDescriptor.cs" />
+    <Compile Include="AssociationAttribute.cs" />
+    <Compile Include="BindableTypeAttribute.cs" />
+    <Compile Include="CompareAttribute.cs" />
+    <Compile Include="ConcurrencyCheckAttribute.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="CreditCardAttribute.cs" />
+    <Compile Include="CustomValidationAttribute.cs" />
+    <Compile Include="DataType.cs" />
+    <Compile Include="DataTypeAttribute.cs" />
+    <Compile Include="DisplayAttribute.cs" />
+    <Compile Include="DisplayColumnAttribute.cs" />
+    <Compile Include="DisplayFormatAttribute.cs" />
+    <Compile Include="EditableAttribute.cs" />
+    <Compile Include="EmailAddressAttribute.cs" />
+    <Compile Include="EnumDataTypeAttribute.cs" />
+    <Compile Include="FileExtensionsAttribute.cs" />
+    <Compile Include="FilterUIHintAttribute.cs" />
+    <Compile Include="IValidatableObject.cs" />
+    <Compile Include="KeyAttribute.cs" />
+    <Compile Include="LocalizableString.cs" />
+    <Compile Include="MaxLengthAttribute.cs" />
+    <Compile Include="MetadataPropertyDescriptorWrapper.cs" />
+    <Compile Include="MetadataTypeAttribute.cs" />
+    <Compile Include="MinLengthAttribute.cs" />
+    <Compile Include="PhoneAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangeAttribute.cs" />
+    <Compile Include="RegularExpressionAttribute.cs" />
+    <Compile Include="RequiredAttribute.cs" />
+    <Compile Include="Resources\DataAnnotationsResources.cs" />
+    <Compile Include="ScaffoldColumnAttribute.cs" />
+    <Compile Include="ScaffoldTableAttribute.cs" />
+    <Compile Include="Schema\ColumnAttribute.cs" />
+    <Compile Include="Schema\ComplexTypeAttribute.cs" />
+    <Compile Include="Schema\DatabaseGeneratedAttribute.cs" />
+    <Compile Include="Schema\DatabaseGeneratedOption.cs" />
+    <Compile Include="Schema\ForeignKeyAttribute.cs" />
+    <Compile Include="Schema\InversePropertyAttribute.cs" />
+    <Compile Include="Schema\NotMappedAttribute.cs" />
+    <Compile Include="Schema\TableAttribute.cs" />
+    <Compile Include="StringLengthAttribute.cs" />
+    <Compile Include="TimestampAttribute.cs" />
+    <Compile Include="UIHintAttribute.cs" />
+    <Compile Include="UrlAttribute.cs" />
+    <Compile Include="ValidationAttribute.cs" />
+    <Compile Include="ValidationAttributeStore.cs" />
+    <Compile Include="ValidationContext.cs" />
+    <Compile Include="ValidationException.cs" />
+    <Compile Include="ValidationResult.cs" />
+    <Compile Include="Validator.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

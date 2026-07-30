@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5AB4F874-2677-4F23-9F48-4D90B8463B46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine</RootNamespace>
+    <AssemblyName>UnityEngine.AIModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\NavMesh.cs" />
+    <Compile Include="AI\NavMeshAgent.cs" />
+    <Compile Include="AI\NavMeshBuildDebugFlags.cs" />
+    <Compile Include="AI\NavMeshBuildDebugSettings.cs" />
+    <Compile Include="AI\NavMeshBuilder.cs" />
+    <Compile Include="AI\NavMeshBuildMarkup.cs" />
+    <Compile Include="AI\NavMeshBuildSettings.cs" />
+    <Compile Include="AI\NavMeshBuildSource.cs" />
+    <Compile Include="AI\NavMeshBuildSourceShape.cs" />
+    <Compile Include="AI\NavMeshCollectGeometry.cs" />
+    <Compile Include="AI\NavMeshData.cs" />
+    <Compile Include="AI\NavMeshDataInstance.cs" />
+    <Compile Include="AI\NavMeshHit.cs" />
+    <Compile Include="AI\NavMeshLinkData.cs" />
+    <Compile Include="AI\NavMeshLinkInstance.cs" />
+    <Compile Include="AI\NavMeshObstacle.cs" />
+    <Compile Include="AI\NavMeshObstacleShape.cs" />
+    <Compile Include="AI\NavMeshPath.cs" />
+    <Compile Include="AI\NavMeshPathStatus.cs" />
+    <Compile Include="AI\NavMeshQueryFilter.cs" />
+    <Compile Include="AI\NavMeshTriangulation.cs" />
+    <Compile Include="AI\ObstacleAvoidanceType.cs" />
+    <Compile Include="AI\OffMeshLink.cs" />
+    <Compile Include="AI\OffMeshLinkData.cs" />
+    <Compile Include="AI\OffMeshLinkType.cs" />
+    <Compile Include="Experimental\AI\NavMeshLocation.cs" />
+    <Compile Include="Experimental\AI\NavMeshPolyTypes.cs" />
+    <Compile Include="Experimental\AI\NavMeshQuery.cs" />
+    <Compile Include="Experimental\AI\NavMeshWorld.cs" />
+    <Compile Include="Experimental\AI\PathQueryStatus.cs" />
+    <Compile Include="Experimental\AI\PolygonId.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

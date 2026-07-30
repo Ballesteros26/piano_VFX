@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace System.Resources.Tools
+{
+	/// <summary>Defines an interface that enables the strongly typed resource builder (<see cref="T:System.Resources.Tools.StronglyTypedResourceBuilder" /> object) to determine which types and properties are available so it can emit the correct Code Document Object Model (CodeDOM) tree.  </summary>
+	// Token: 0x020001D0 RID: 464
+	public interface ITargetAwareCodeDomProvider
+	{
+		/// <summary>Indicates whether the specified type on the project target framework has a specified named property. </summary>
+		/// <returns>true if <paramref name="type" /> on the project target framework has a property named <paramref name="propertyname" />; otherwise, false.</returns>
+		/// <param name="type">The type whose properties are to be queried. </param>
+		/// <param name="propertyName">The name of the property to find in <paramref name="type" />.</param>
+		/// <param name="isWritable">A flag that indicates whether the property must include a get accessor. </param>
+		// Token: 0x06000BEC RID: 3052
+		bool SupportsProperty(Type type, string propertyName, bool isWritable);
+	}
+}

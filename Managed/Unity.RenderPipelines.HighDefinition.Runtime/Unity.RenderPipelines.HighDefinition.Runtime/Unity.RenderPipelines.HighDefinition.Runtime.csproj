@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B01233F-4323-4113-9C2C-CCA1D547A109}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.RenderPipelines.HighDefinition.Runtime</RootNamespace>
+    <AssemblyName>Unity.RenderPipelines.HighDefinition.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>..\..\..\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\..\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
+      <HintPath>..\..\..\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>..\..\..\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\BlendMode.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\DisplacementMode.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\DoubleSidedNormalMode.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\HeightmapMode.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\HeightmapParametrization.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\MaterialExtension.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\MaterialId.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\NormalMapSpace.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\SurfaceType.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\TessellationMode.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\TransparentCullMode.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\UVBaseMapping.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\UVDetailMapping.cs" />
+    <Compile Include="UnityEditor\Rendering\HighDefinition\VertexColorMode.cs" />
+    <Compile Include="UnityEngine\Experimental\Rendering\HighDefinition\HDDiffuseDenoiser.cs" />
+    <Compile Include="UnityEngine\Experimental\Rendering\HighDefinition\HDTemporalFilter.cs" />
+    <Compile Include="UnityEngine\Rendering\AdditionalShadowData.cs" />
+    <Compile Include="UnityEngine\Rendering\BC6HExtensions.cs" />
+    <Compile Include="UnityEngine\Rendering\EncodeBC6H.cs" />
+    <Compile Include="UnityEngine\Rendering\GlobalXRSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\GPUCopy.cs" />
+    <Compile Include="UnityEngine\Rendering\HDGPUAsyncTask.cs" />
+    <Compile Include="UnityEngine\Rendering\HDGPUAsyncTaskParams.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AccelerationStructureStatus.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AdaptationMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AdaptationModeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AmbientOcclusion.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AmbientOcclusionSystem.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AOVBuffers.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AOVRequest.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AOVRequestBufferAllocator.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AOVRequestBuilder.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AOVRequestData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AOVRequestDataCollection.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AreaLightShape.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AreaLightUnit.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AtlasAllocator.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AtmosphericScattering.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Attributes\DebugViewGbuffer.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Attributes\DebugViewProperties.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Attributes\DebugViewVarying.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Attributes\MaterialSharedProperty.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Attributes\MaterialSharedPropertyMappingAttribute.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\AxF.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\BackplateType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\BackplateTypeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Bloom.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\BloomResolution.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\BloomResolutionParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\BlueNoise.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\BoolScalableSetting.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\BoolScalableSettingValue.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Builtin.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\BuiltinSkyParameters.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CachedSkyContext.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CameraCache.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CameraPositionSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CameraProjection.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CameraSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CameraSettingsFields.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CameraSettingsOverride.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CameraSettingsUtilities.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CascadeEndBorderParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CascadePartitionSplitParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ChannelMixer.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ChromaticAberration.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ColorAdjustments.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ColorCurves.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ColorPickerDebugMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ColorPickerDebugSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ContactShadows.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CookieAtlasGraphicsFormat.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CookieAtlasResolution.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CookieMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CubeCookieResolution.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CubeReflectionResolution.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CullingGroupManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CustomPass.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CustomPassInjectionPoint.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CustomPassVolume.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CustomPostProcessInjectionPoint.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\CustomPostProcessVolumeComponent.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DBufferManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DebugDisplaySettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DebugFullScreen.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DebugLightFilterMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DebugLightHierarchyExtensions.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DebugLightingMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DebugLightVolumes.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DebugMipMapMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DebugMipMapModeTerrainTexture.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Decal.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DecalData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DecalProjector.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DecalsDebugSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DecalSystem.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DensityVolume.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DensityVolumeArtistParameters.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DensityVolumeEngineData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DensityVolumeList.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DensityVolumeManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DepthOfField.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DepthOfFieldMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DepthOfFieldModeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DepthOfFieldResolution.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DepthOfFieldResolutionParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DiffusionProfile.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DiffusionProfileConstants.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DiffusionProfileOverride.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DiffusionProfileSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DiffusionProfileSettingsParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DirectionalLightData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DirectionalLightUnit.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DirectionalShadowAlgorithm.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Documentation.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\DrawRenderersCustomPass.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\EnvCacheType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\EnvConstants.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\EnvironmentUpdateMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\EnvLightData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\EnvShapeType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\EnvUpdateParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ExponentialFog.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Exposure.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ExposureMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ExposureModeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Eye.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Fabric.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FalseColorDebugSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FilmGrain.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FilmGrainLookup.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FilmGrainLookupParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FloatScalableSetting.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FloatScalableSettingValue.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Fog.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FogColorMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FogColorParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FogType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FogTypeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FramePassCallback.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FrameSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FrameSettingsField.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FrameSettingsFieldAttribute.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FrameSettingsHistory.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FrameSettingsOverrideMask.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FrameSettingsRenderType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Frustum.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FullScreenCustomPass.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\FullScreenDebugMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GameObjectExtension.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GBufferManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GBufferUsage.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GeometryUtils.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GlobalDecalSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GlobalIllumination.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GlobalIlluminationUtils.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GlobalLightingQualitySettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GlobalLightLoopSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GlobalLowResolutionTransparencySettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GlobalPostProcessingQualitySettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GlobalPostProcessSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GPUImageBasedLightingType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GPULightType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GPULightTypeExtension.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GradientSky.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GradientSkyRenderer.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\GradingLutFormat.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Hair.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDAdditionalCameraData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDAdditionalLightData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDAdditionalReflectionData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDAdditionalReflectionDataExtensions.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDBakingUtilities.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDCamera.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDCameraFrameHistoryType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDDirectionalShadowData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDLightType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDLightTypeAndShape.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDLightTypeExtension.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDMaterialProperties.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDPhysicalCamera.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDProbe.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDProbeCullingResults.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDProbeCullState.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDProbeSystem.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDProbeSystemInternal.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDProfileId.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRaytracingAmbientOcclusion.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRaytracingLightCluster.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRayTracingLights.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDReflectionDenoiser.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRenderPipeline.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRenderPipelineAsset.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRenderPipelineRayTracingResources.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRenderQueue.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRenderUtilities.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRISky.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRISkyRenderer.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDRuntimeReflectionSystem.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShaderIDs.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShaderPassNames.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShadowAtlas.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShadowData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShadowInitParameters.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShadowManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShadowRequest.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShadowResolutionRequest.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShadowSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDShadowUtils.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDSimpleDenoiser.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDTextureUtilities.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\HDUtils.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IBLFilterBSDF.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IBLFilterCharlie.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IBLFilterGGX.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IFrameSettingsHistoryContainer.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IndirectLightingController.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\InfluenceShape.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\InfluenceVolume.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\InternalRayTracingBuffers.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IntScalableSetting.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IntScalableSettingValue.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IPostProcessComponent.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\IVersionable.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LensDistortion.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LiftGammaGain.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightCategory.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightCluster.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightCookieManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightDefinitions.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightFeatureFlags.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightingDebugSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightingProperty.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightLayerEnum.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightSamplingParameters.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightUnit.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightUtils.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightVolume.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightVolumeData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightVolumeDebug.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LightVolumeType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Lit.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LitShaderMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LODBiasMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LowResTransparentUpsample.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LTCAreaLight.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LuminanceSource.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\LuminanceSourceParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MaterialDebugSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MaximumLODLevelMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MeteringMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MeteringModeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MicroShadowing.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MigrationDescription.2.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MigrationDescription.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MigrationStep.2.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MigrationStep.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MipGenerator.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MipMapDebugSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MotionBlur.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\MRTBufferManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ObsoleteCaptureSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ObsoleteCaptureSettingsOverrides.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ObsoleteFrameSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ObsoleteFrameSettingsOverrides.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ObsoleteLightLoopSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ObsoleteLightLoopSettingsOverrides.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ObsoleteLitShaderMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\OrientedBBox.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PaniniProjection.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PathTracing.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PhysicallyBasedSky.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PhysicallyBasedSkyRenderer.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PlanarReflectionAtlasResolution.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PlanarReflectionProbe.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PlanarReflectionProbeCache.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PostProcessBufferFormat.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PostProcessSystem.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PowerOfTwoTextureAtlas.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PreIntegratedFGD.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProbeCapturePositionSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProbeSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProbeSettingsFields.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProbeSettingsOverride.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProbeSettingsUtilities.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProcessedLightData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProcessedProbeData.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProxyShape.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ProxyVolume.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\PunctualLightUnit.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RayCountManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RayCountValues.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RayTracingMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RayTracingModeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RayTracingRendererFlag.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RayTracingSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RecursiveRendering.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ReflectionProbeCache.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ReflectionProxyVolumeComponent.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ReflectionSystemParameters.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RenderOutputProperties.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RenderPipelineMaterial.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RenderPipelineResources.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\RenderPipelineSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ScalableSetting.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ScalableSettingLevelParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ScalableSettingSchema.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ScalableSettingSchemaId.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ScalableSettingValue.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SceneObjectIDMap.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SceneObjectIDMapSceneAsset.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ScreenSpaceReflection.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ScreenSpaceRefraction.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ScreenSpaceShadowFormat.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SFiniteLightBound.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShaderPass.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShaderVariablesAtmosphericScattering.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShaderVariablesDecal.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShaderVariablesLightLoop.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShaderVariablesScreenSpaceLighting.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShaderVariablesSubsurfaceScattering.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShaderVariantLogLevel.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShadowMapDebugMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShadowMapType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShadowResult.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShadowsMidtonesHighlights.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ShadowUpdateMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SharedRTManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyAmbientMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyAmbientModeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyIntensityMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyIntensityParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyManager.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyRenderer.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyRenderingContext.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyResolution.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkySettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyType.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyUniqueID.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SkyUpdateContext.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SphericalHarmonicMath.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SplitToning.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SpotLightShape.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SPTDistribution.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\StackLit.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\StandardLit.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\StaticLightingSky.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\StencilUsage.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\StringExtention.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\SubSurfaceScattering.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Texture2DAtlas.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Texture3DAtlas.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TextureCache.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TextureCache2D.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TextureCacheCubemap.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TileClusterCategoryDebug.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TileClusterDebug.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TimelineWorkaround.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Tonemapping.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TonemappingMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TonemappingModeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TransparencyDebugSettings.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\TypeInfo.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\UberPostFeatureFlags.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\UintScalableSetting.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\UintScalableSettingValue.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Unlit.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\UserStencilUsage.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VBufferParameters.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\Vignette.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VignetteMode.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VignetteModeParameter.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VisibleLightExtensionMethods.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VisualEnvironment.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VolumeComponentWithQuality.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VolumeRenderingUtils.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VolumetricFog.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VolumetricLightingController.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\VolumetricLightingPreset.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\WhiteBalance.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\XRLayout.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\XRPass.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\XRPassCreateInfo.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\XRSinglePassScope.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\XRSystem.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\XRView.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\XRViewCreateInfo.cs" />
+    <Compile Include="UnityEngine\Rendering\HighDefinition\ZonalHarmonicsL2.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\HDRPCameraBinder.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

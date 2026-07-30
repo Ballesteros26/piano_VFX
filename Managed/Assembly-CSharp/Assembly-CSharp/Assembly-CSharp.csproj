@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB600A1C-7B4D-47DE-82DF-DD5616D78A82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assembly-CSharp</RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Ookii.Dialogs">
+      <HintPath>..\..\..\Ookii.Dialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\..\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+      <HintPath>..\..\..\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\..\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivateTile.cs" />
+    <Compile Include="ApplyColorProfile.cs" />
+    <Compile Include="AudioVisualizer.cs" />
+    <Compile Include="ColorController.cs" />
+    <Compile Include="ColorProfileObject.cs" />
+    <Compile Include="ControlDissolve.cs" />
+    <Compile Include="EditorObject.cs" />
+    <Compile Include="EventName.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="HUDController.cs" />
+    <Compile Include="LEDController.cs" />
+    <Compile Include="LedProfile.cs" />
+    <Compile Include="LetterboxCamera\CameraRatio.cs" />
+    <Compile Include="LetterboxCamera\Demo.cs" />
+    <Compile Include="LetterboxCamera\DragonClass.cs" />
+    <Compile Include="LetterboxCamera\EnemyClass.cs" />
+    <Compile Include="LetterboxCamera\Feed.cs" />
+    <Compile Include="LetterboxCamera\FollowCam.cs" />
+    <Compile Include="LetterboxCamera\FoodTracker.cs" />
+    <Compile Include="LetterboxCamera\ForceCameraRatio.cs" />
+    <Compile Include="LetterboxCamera\GameManager.cs" />
+    <Compile Include="LetterboxCamera\LetterboxGameDemo.cs" />
+    <Compile Include="LetterboxCamera\LoopingTerrain.cs" />
+    <Compile Include="LetterboxCamera\MenuSpin.cs" />
+    <Compile Include="LetterboxCamera\Parralax.cs" />
+    <Compile Include="LetterboxCamera\PlayerMovement.cs" />
+    <Compile Include="LetterboxCamera\PlayerScrollScript.cs" />
+    <Compile Include="LetterboxCamera\rotAxis.cs" />
+    <Compile Include="LetterboxCamera\TeleportPlayer.cs" />
+    <Compile Include="LetterboxCamera\TerrainSegment.cs" />
+    <Compile Include="LetterboxCamera\Util.cs" />
+    <Compile Include="LetterboxCamera\UVMappingMode.cs" />
+    <Compile Include="LivePlayNote.cs" />
+    <Compile Include="MetaEventName.cs" />
+    <Compile Include="MidiController.cs" />
+    <Compile Include="MidiEvent.cs" />
+    <Compile Include="MidiFile.cs" />
+    <Compile Include="MidiNote.cs" />
+    <Compile Include="MidiTrack.cs" />
+    <Compile Include="MoveTile.cs" />
+    <Compile Include="NatSuite\Devices\AudioDevice.cs" />
+    <Compile Include="NatSuite\Devices\CameraDevice.cs" />
+    <Compile Include="NatSuite\Devices\FlashMode.cs" />
+    <Compile Include="NatSuite\Devices\FrameOrientation.cs" />
+    <Compile Include="NatSuite\Devices\IAudioDevice.cs" />
+    <Compile Include="NatSuite\Devices\ICameraDevice.cs" />
+    <Compile Include="NatSuite\Devices\IMediaDevice.cs" />
+    <Compile Include="NatSuite\Devices\Internal\Bridge.cs" />
+    <Compile Include="NatSuite\Devices\Internal\CodeAttribute.cs" />
+    <Compile Include="NatSuite\Devices\Internal\DocAttribute.cs" />
+    <Compile Include="NatSuite\Devices\Internal\NativeAudioDevice.cs" />
+    <Compile Include="NatSuite\Devices\Internal\NativeCameraDevice.cs" />
+    <Compile Include="NatSuite\Devices\Internal\RefAttribute.cs" />
+    <Compile Include="NatSuite\Devices\MediaDeviceQuery.cs" />
+    <Compile Include="NatSuite\Devices\MixerDevice.cs" />
+    <Compile Include="NatSuite\Devices\SampleBufferDelegate.cs" />
+    <Compile Include="NatSuite\Devices\WebCameraDevice.cs" />
+    <Compile Include="NatSuite\Examples\MiniCam.cs" />
+    <Compile Include="NatSuite\Recorders\Clocks\FixedIntervalClock.cs" />
+    <Compile Include="NatSuite\Recorders\Clocks\IClock.cs" />
+    <Compile Include="NatSuite\Recorders\Clocks\RealtimeClock.cs" />
+    <Compile Include="NatSuite\Recorders\GIFRecorder.cs" />
+    <Compile Include="NatSuite\Recorders\HEVCRecorder.cs" />
+    <Compile Include="NatSuite\Recorders\IMediaRecorder.cs" />
+    <Compile Include="NatSuite\Recorders\Inputs\AudioInput.cs" />
+    <Compile Include="NatSuite\Recorders\Inputs\CameraInput.cs" />
+    <Compile Include="NatSuite\Recorders\Inputs\WebCamTextureInput.cs" />
+    <Compile Include="NatSuite\Recorders\Internal\Bridge.cs" />
+    <Compile Include="NatSuite\Recorders\Internal\CodeAttribute.cs" />
+    <Compile Include="NatSuite\Recorders\Internal\DocAttribute.cs" />
+    <Compile Include="NatSuite\Recorders\Internal\NativeRecorder.cs" />
+    <Compile Include="NatSuite\Recorders\Internal\RefAttribute.cs" />
+    <Compile Include="NatSuite\Recorders\Internal\Utility.cs" />
+    <Compile Include="NatSuite\Recorders\JPGRecorder.cs" />
+    <Compile Include="NatSuite\Recorders\MP4Recorder.cs" />
+    <Compile Include="NatSuite\Recorders\WAVRecorder.cs" />
+    <Compile Include="ParticleEditor.cs" />
+    <Compile Include="ParticleObject.cs" />
+    <Compile Include="ParticleSlots.cs" />
+    <Compile Include="PatrikEffect.cs" />
+    <Compile Include="PedalController.cs" />
+    <Compile Include="PianoEditor.cs" />
+    <Compile Include="PlayMidiSound.cs" />
+    <Compile Include="PostEffect.cs" />
+    <Compile Include="ProjectObject.cs" />
+    <Compile Include="ProjectSlots.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Readme.cs" />
+    <Compile Include="SavWav.cs" />
+    <Compile Include="ScreenRecorder.cs" />
+    <Compile Include="SFB\ExtensionFilter.cs" />
+    <Compile Include="SFB\IStandaloneFileBrowser.cs" />
+    <Compile Include="SFB\StandaloneFileBrowser.cs" />
+    <Compile Include="SFB\StandaloneFileBrowserWindows.cs" />
+    <Compile Include="SFB\WindowWrapper.cs" />
+    <Compile Include="SpawnEffect.cs" />
+    <Compile Include="TextureEditor.cs" />
+    <Compile Include="TextureObject.cs" />
+    <Compile Include="UnityTemplateProjects\SimpleCameraController.cs" />
+    <Compile Include="UserValues.cs" />
+    <Compile Include="VideoRenderer.cs" />
+    <Compile Include="VisualizationMode.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

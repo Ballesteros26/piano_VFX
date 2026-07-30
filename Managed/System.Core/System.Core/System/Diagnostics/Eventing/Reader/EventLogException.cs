@@ -1,0 +1,59 @@
+﻿using System;
+using System.Runtime.Serialization;
+using System.Security.Permissions;
+using Unity;
+
+namespace System.Diagnostics.Eventing.Reader
+{
+	/// <summary>Represents the base class for all the exceptions that are thrown when an error occurs while reading event log related information. </summary>
+	/// <filterpriority>2</filterpriority>
+	// Token: 0x02000392 RID: 914
+	[HostProtection(SecurityAction.LinkDemand, MayLeakOnAbort = true)]
+	[Serializable]
+	public class EventLogException : Exception
+	{
+		/// <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Eventing.Reader.EventLogException" /> class.</summary>
+		/// <filterpriority>2</filterpriority>
+		// Token: 0x06001B0F RID: 6927 RVA: 0x0000220F File Offset: 0x0000040F
+		public EventLogException()
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+
+		/// <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Eventing.Reader.EventLogException" /> class with the error code for the exception.</summary>
+		/// <param name="errorCode">The error code for the error that occurred while reading or configuring event log related information. For more information and a list of event log related error codes, see http://go.microsoft.com/fwlink/?LinkId=82629.</param>
+		// Token: 0x06001B10 RID: 6928 RVA: 0x0000220F File Offset: 0x0000040F
+		protected EventLogException(int errorCode)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+
+		/// <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Eventing.Reader.EventLogException" /> class with serialized data.</summary>
+		/// <param name="serializationInfo">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception being thrown.</param>
+		/// <param name="streamingContext">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		// Token: 0x06001B11 RID: 6929 RVA: 0x0000220F File Offset: 0x0000040F
+		protected EventLogException(SerializationInfo serializationInfo, StreamingContext streamingContext)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+
+		/// <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Eventing.Reader.EventLogException" /> class by specifying the error message that describes the current exception.</summary>
+		/// <param name="message">The error message that describes the current exception.</param>
+		/// <filterpriority>2</filterpriority>
+		// Token: 0x06001B12 RID: 6930 RVA: 0x0000220F File Offset: 0x0000040F
+		public EventLogException(string message)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+
+		/// <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Eventing.Reader.EventLogException" /> class with an error message and inner exception.</summary>
+		/// <param name="message">The error message that describes the current exception.</param>
+		/// <param name="innerException">The Exception instance that caused the current exception.</param>
+		/// <filterpriority>2</filterpriority>
+		// Token: 0x06001B13 RID: 6931 RVA: 0x0000220F File Offset: 0x0000040F
+		public EventLogException(string message, Exception innerException)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+	}
+}

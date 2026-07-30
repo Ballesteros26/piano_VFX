@@ -1,0 +1,15 @@
+﻿using System;
+using System.Runtime.InteropServices;
+
+namespace System
+{
+	/// <summary>Represents the method that handles the <see cref="E:System.AppDomain.AssemblyLoad" /> event of an <see cref="T:System.AppDomain" />.</summary>
+	/// <param name="sender">The source of the event. </param>
+	/// <param name="args">An <see cref="T:System.AssemblyLoadEventArgs" /> that contains the event data. </param>
+	/// <filterpriority>2</filterpriority>
+	// Token: 0x02000207 RID: 519
+	// (Invoke) Token: 0x06001832 RID: 6194
+	[ComVisible(true)]
+	[Serializable]
+	public delegate void AssemblyLoadEventHandler(object sender, AssemblyLoadEventArgs args);
+}

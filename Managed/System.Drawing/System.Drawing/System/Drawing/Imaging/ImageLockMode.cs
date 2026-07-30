@@ -1,0 +1,22 @@
+﻿using System;
+
+namespace System.Drawing.Imaging
+{
+	/// <summary>Specifies flags that are passed to the flags parameter of the <see cref="Overload:System.Drawing.Bitmap.LockBits" /> method. The <see cref="Overload:System.Drawing.Bitmap.LockBits" /> method locks a portion of an image so that you can read or write the pixel data.</summary>
+	// Token: 0x02000108 RID: 264
+	public enum ImageLockMode
+	{
+		/// <summary>Specifies that a portion of the image is locked for reading.</summary>
+		// Token: 0x040009C2 RID: 2498
+		ReadOnly = 1,
+		/// <summary>Specifies that a portion of the image is locked for writing.</summary>
+		// Token: 0x040009C3 RID: 2499
+		WriteOnly,
+		/// <summary>Specifies that a portion of the image is locked for reading or writing.</summary>
+		// Token: 0x040009C4 RID: 2500
+		ReadWrite,
+		/// <summary>Specifies that the buffer used for reading or writing pixel data is allocated by the user. If this flag is set, the <paramref name="flags" /> parameter of the <see cref="Overload:System.Drawing.Bitmap.LockBits" /> method serves as an input parameter (and possibly as an output parameter). If this flag is cleared, then the <paramref name="flags" /> parameter serves only as an output parameter.</summary>
+		// Token: 0x040009C5 RID: 2501
+		UserInputBuffer
+	}
+}

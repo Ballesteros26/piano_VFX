@@ -1,0 +1,97 @@
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Permissions;
+using Unity;
+
+namespace System.Security.Cryptography
+{
+	/// <summary>Provides information for a manifest signature. </summary>
+	// Token: 0x0200035F RID: 863
+	[HostProtection(SecurityAction.LinkDemand, MayLeakOnAbort = true)]
+	public sealed class ManifestSignatureInformation
+	{
+		// Token: 0x06001A2A RID: 6698 RVA: 0x0000220F File Offset: 0x0000040F
+		internal ManifestSignatureInformation()
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+		}
+
+		/// <summary>Gets the Authenticode signature information for a manifest. </summary>
+		/// <returns>An <see cref="T:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation" /> object that contains Authenticode signature information for the manifest, or null if there is no signature.</returns>
+		// Token: 0x170004A0 RID: 1184
+		// (get) Token: 0x06001A2B RID: 6699 RVA: 0x000560B4 File Offset: 0x000542B4
+		public AuthenticodeSignatureInformation AuthenticodeSignature
+		{
+			get
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+				return null;
+			}
+		}
+
+		/// <summary>Gets the type of a manifest.</summary>
+		/// <returns>One of the <see cref="T:System.Security.ManifestKinds" /> values.</returns>
+		// Token: 0x170004A1 RID: 1185
+		// (get) Token: 0x06001A2C RID: 6700 RVA: 0x0005612C File Offset: 0x0005432C
+		public ManifestKinds Manifest
+		{
+			get
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+				return ManifestKinds.None;
+			}
+		}
+
+		/// <summary>Gets the details of the strong name signature of a manifest.</summary>
+		/// <returns>A <see cref="P:System.Security.Cryptography.ManifestSignatureInformation.StrongNameSignature" /> object that contains the signature, or null if there is no strong name signature.</returns>
+		// Token: 0x170004A2 RID: 1186
+		// (get) Token: 0x06001A2D RID: 6701 RVA: 0x000560B4 File Offset: 0x000542B4
+		public StrongNameSignatureInformation StrongNameSignature
+		{
+			get
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+				return null;
+			}
+		}
+
+		/// <summary>Gathers and verifies information about the signatures of manifests that belong to a specified activation context.</summary>
+		/// <returns>A collection that contains a <see cref="T:System.Security.Cryptography.ManifestSignatureInformation" /> object for each manifest that is verified.</returns>
+		/// <param name="application">The activation context of the manifest. Activation contexts belong to an application and contain multiple manifests.</param>
+		/// <exception cref="T:System.ArgumentNullException">The <paramref name="application" /> parameter is null.</exception>
+		// Token: 0x06001A2E RID: 6702 RVA: 0x000560B4 File Offset: 0x000542B4
+		public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+			return null;
+		}
+
+		/// <summary>Gathers and verifies information about the signatures of manifests that belong to a specified activation context and manifest type.</summary>
+		/// <returns>A collection that contains a <see cref="T:System.Security.Cryptography.ManifestSignatureInformation" /> object for each manifest that is verified.</returns>
+		/// <param name="application">The activation context of the manifest. Activation contexts belong to an application and contain multiple manifests.</param>
+		/// <param name="manifests">The type of manifest. This parameter specifies which manifests in the activation context you want to verify.</param>
+		/// <exception cref="T:System.ArgumentNullException">The <paramref name="application" /> parameter is null.</exception>
+		// Token: 0x06001A2F RID: 6703 RVA: 0x000560B4 File Offset: 0x000542B4
+		public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application, ManifestKinds manifests)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+			return null;
+		}
+
+		/// <summary>Gathers and verifies information about the signatures of manifests that belong to a specified activation context and manifest type, and allows certificates to be selected for revocation.</summary>
+		/// <returns>A collection that contains a <see cref="T:System.Security.Cryptography.ManifestSignatureInformation" /> object for each manifest that is verified.</returns>
+		/// <param name="application">The application context of the manifests. Activation contexts belong to an application and contain multiple manifests.</param>
+		/// <param name="manifests">The type of manifest. This parameter specifies which manifests in the activation context you want to verify.</param>
+		/// <param name="revocationFlag">One of the enumeration values that specifies which certificates in the chain are checked for revocation. The default is <see cref="F:System.Security.Cryptography.X509Certificates.X509RevocationFlag.ExcludeRoot" />.</param>
+		/// <param name="revocationMode">Determines whether the X.509 verification should look online for revocation lists. </param>
+		/// <exception cref="T:System.ArgumentNullException">The <paramref name="application" /> parameter is null.</exception>
+		/// <exception cref="T:System.ArgumentOutOfRangeException">A value specified for the <paramref name="revocationFlag" /> or <paramref name="revocationMode" /> parameter is invalid.</exception>
+		// Token: 0x06001A30 RID: 6704 RVA: 0x000560B4 File Offset: 0x000542B4
+		[SecuritySafeCritical]
+		public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application, ManifestKinds manifests, X509RevocationFlag revocationFlag, X509RevocationMode revocationMode)
+		{
+			global::Unity.ThrowStub.ThrowNotSupportedException();
+			return null;
+		}
+	}
+}

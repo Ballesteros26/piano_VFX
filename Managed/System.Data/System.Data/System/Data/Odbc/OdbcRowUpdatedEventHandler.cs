@@ -1,0 +1,12 @@
+﻿using System;
+
+namespace System.Data.Odbc
+{
+	/// <summary>Represents the method that will handle the <see cref="E:System.Data.Odbc.OdbcDataAdapter.RowUpdated" /> event of an <see cref="T:System.Data.Odbc.OdbcDataAdapter" />.</summary>
+	/// <param name="sender">The source of the event. </param>
+	/// <param name="e">The <see cref="T:System.Data.Odbc.OdbcRowUpdatedEventArgs" /> that contains the event data. </param>
+	/// <filterpriority>2</filterpriority>
+	// Token: 0x020002AD RID: 685
+	// (Invoke) Token: 0x06001D57 RID: 7511
+	public delegate void OdbcRowUpdatedEventHandler(object sender, OdbcRowUpdatedEventArgs e);
+}

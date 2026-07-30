@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{172857E0-7F66-4F23-B04E-1644AC1EFF49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.XR</RootNamespace>
+    <AssemblyName>UnityEngine.XRModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AvailableTrackingData.cs" />
+    <Compile Include="Bone.cs" />
+    <Compile Include="CommonUsages.cs" />
+    <Compile Include="ConnectionChangeType.cs" />
+    <Compile Include="Eyes.cs" />
+    <Compile Include="EyeSide.cs" />
+    <Compile Include="Hand.cs" />
+    <Compile Include="HandFinger.cs" />
+    <Compile Include="HapticCapabilities.cs" />
+    <Compile Include="HashCodeHelper.cs" />
+    <Compile Include="InputDevice.cs" />
+    <Compile Include="InputDeviceCharacteristics.cs" />
+    <Compile Include="InputDeviceRole.cs" />
+    <Compile Include="InputDevices.cs" />
+    <Compile Include="InputFeatureType.cs" />
+    <Compile Include="InputFeatureUsage.2.cs" />
+    <Compile Include="InputFeatureUsage.cs" />
+    <Compile Include="InputTracking.cs" />
+    <Compile Include="InputTrackingState.cs" />
+    <Compile Include="MeshChangeState.cs" />
+    <Compile Include="MeshGenerationResult.cs" />
+    <Compile Include="MeshGenerationStatus.cs" />
+    <Compile Include="MeshId.cs" />
+    <Compile Include="MeshInfo.cs" />
+    <Compile Include="MeshVertexAttributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\XRStats.cs" />
+    <Compile Include="TimeConverter.cs" />
+    <Compile Include="TrackingOriginModeFlags.cs" />
+    <Compile Include="XRDisplaySubsystem.cs" />
+    <Compile Include="XRDisplaySubsystemDescriptor.cs" />
+    <Compile Include="XRInputSubsystem.cs" />
+    <Compile Include="XRInputSubsystemDescriptor.cs" />
+    <Compile Include="XRMeshSubsystem.cs" />
+    <Compile Include="XRMeshSubsystemDescriptor.cs" />
+    <Compile Include="XRMirrorViewBlitMode.cs" />
+    <Compile Include="XRMirrorViewBlitModeDesc.cs" />
+    <Compile Include="XRNode.cs" />
+    <Compile Include="XRNodeState.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A182FB8-B323-44B3-97DD-FC6AB94DA1B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.VisualEffectGraph.Runtime</RootNamespace>
+    <AssemblyName>Unity.VisualEffectGraph.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\..\..\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IncrementStripIndexOnStart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityEditor\VFX\LoopAndDelay.cs" />
+    <Compile Include="UnityEditor\VFX\SetSpawnTime.cs" />
+    <Compile Include="UnityEditor\VFX\SpawnOverDistance.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\ExposedProperty.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXAudioSpectrumBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXBinderAttribute.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXBinderBase.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXEnabledBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXEventBinderBase.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXHierarchyAttributeMapBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXInputAxisBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXInputButtonBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXInputKeyBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXInputMouseBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXInputTouchBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXLightBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXMouseEventBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXMultiplePositionBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXPlaneBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXPositionBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXPreviousPositionBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXPropertyBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXPropertyBindingAttribute.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXRaycastBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXRigidBodyCollisionEventBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXSphereBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXTerrainBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXTransformBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXTriggerEventBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXUIDropdownBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXUISliderBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXUIToggleBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXVelocityBinder.cs" />
+    <Compile Include="UnityEngine\VFX\Utility\VFXVisibilityEventBinder.cs" />
+    <Compile Include="VisualEffectActivationBehaviour.cs" />
+    <Compile Include="VisualEffectActivationClip.cs" />
+    <Compile Include="VisualEffectActivationMixerBehaviour.cs" />
+    <Compile Include="VisualEffectActivationTrack.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

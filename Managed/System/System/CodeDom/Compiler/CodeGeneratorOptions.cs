@@ -1,0 +1,128 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Specialized;
+
+namespace System.CodeDom.Compiler
+{
+	/// <summary>Represents a set of options used by a code generator.</summary>
+	// Token: 0x020007A7 RID: 1959
+	public class CodeGeneratorOptions
+	{
+		/// <summary>Gets or sets the object at the specified index.</summary>
+		/// <returns>The object associated with the specified name. If no object associated with the specified name exists in the collection, null.</returns>
+		/// <param name="index">The name associated with the object to retrieve. </param>
+		// Token: 0x17000F20 RID: 3872
+		public object this[string index]
+		{
+			get
+			{
+				return this._options[index];
+			}
+			set
+			{
+				this._options[index] = value;
+			}
+		}
+
+		/// <summary>Gets or sets the string to use for indentations.</summary>
+		/// <returns>A string containing the characters to use for indentations.</returns>
+		// Token: 0x17000F21 RID: 3873
+		// (get) Token: 0x06003EB8 RID: 16056 RVA: 0x000DDC74 File Offset: 0x000DBE74
+		// (set) Token: 0x06003EB9 RID: 16057 RVA: 0x000DDCA1 File Offset: 0x000DBEA1
+		public string IndentString
+		{
+			get
+			{
+				object obj = this._options["IndentString"];
+				if (obj == null)
+				{
+					return "    ";
+				}
+				return (string)obj;
+			}
+			set
+			{
+				this._options["IndentString"] = value;
+			}
+		}
+
+		/// <summary>Gets or sets the style to use for bracing.</summary>
+		/// <returns>A string containing the bracing style to use.</returns>
+		// Token: 0x17000F22 RID: 3874
+		// (get) Token: 0x06003EBA RID: 16058 RVA: 0x000DDCB4 File Offset: 0x000DBEB4
+		// (set) Token: 0x06003EBB RID: 16059 RVA: 0x000DDCE1 File Offset: 0x000DBEE1
+		public string BracingStyle
+		{
+			get
+			{
+				object obj = this._options["BracingStyle"];
+				if (obj == null)
+				{
+					return "Block";
+				}
+				return (string)obj;
+			}
+			set
+			{
+				this._options["BracingStyle"] = value;
+			}
+		}
+
+		/// <summary>Gets or sets a value indicating whether to append an else, catch, or finally block, including brackets, at the closing line of each previous if or try block.</summary>
+		/// <returns>true if an else should be appended; otherwise, false. The default value of this property is false.</returns>
+		// Token: 0x17000F23 RID: 3875
+		// (get) Token: 0x06003EBC RID: 16060 RVA: 0x000DDCF4 File Offset: 0x000DBEF4
+		// (set) Token: 0x06003EBD RID: 16061 RVA: 0x000DDD1D File Offset: 0x000DBF1D
+		public bool ElseOnClosing
+		{
+			get
+			{
+				object obj = this._options["ElseOnClosing"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				this._options["ElseOnClosing"] = value;
+			}
+		}
+
+		/// <summary>Gets or sets a value indicating whether to insert blank lines between members.</summary>
+		/// <returns>true if blank lines should be inserted; otherwise, false. By default, the value of this property is true.</returns>
+		// Token: 0x17000F24 RID: 3876
+		// (get) Token: 0x06003EBE RID: 16062 RVA: 0x000DDD38 File Offset: 0x000DBF38
+		// (set) Token: 0x06003EBF RID: 16063 RVA: 0x000DDD61 File Offset: 0x000DBF61
+		public bool BlankLinesBetweenMembers
+		{
+			get
+			{
+				object obj = this._options["BlankLinesBetweenMembers"];
+				return obj == null || (bool)obj;
+			}
+			set
+			{
+				this._options["BlankLinesBetweenMembers"] = value;
+			}
+		}
+
+		/// <summary>Gets or sets a value indicating whether to generate members in the order in which they occur in member collections.</summary>
+		/// <returns>true to generate the members in the order in which they occur in the member collection; otherwise, false. The default value of this property is false.</returns>
+		// Token: 0x17000F25 RID: 3877
+		// (get) Token: 0x06003EC0 RID: 16064 RVA: 0x000DDD7C File Offset: 0x000DBF7C
+		// (set) Token: 0x06003EC1 RID: 16065 RVA: 0x000DDDA5 File Offset: 0x000DBFA5
+		public bool VerbatimOrder
+		{
+			get
+			{
+				object obj = this._options["VerbatimOrder"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				this._options["VerbatimOrder"] = value;
+			}
+		}
+
+		// Token: 0x04002E2F RID: 11823
+		private readonly IDictionary _options = new ListDictionary();
+	}
+}

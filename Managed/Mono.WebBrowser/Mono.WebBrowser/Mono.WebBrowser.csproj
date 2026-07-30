@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E4C90F5-BF3D-4DDC-A676-F02A28430459}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mono</RootNamespace>
+    <AssemblyName>Mono.WebBrowser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consts.cs" />
+    <Compile Include="Mozilla\AsciiString.cs" />
+    <Compile Include="Mozilla\Base.cs" />
+    <Compile Include="Mozilla\Callback.cs" />
+    <Compile Include="Mozilla\Callback2.cs" />
+    <Compile Include="Mozilla\Callback2String.cs" />
+    <Compile Include="Mozilla\CallbackBinder.cs" />
+    <Compile Include="Mozilla\CallbackBool.cs" />
+    <Compile Include="Mozilla\CallbackIntInt.cs" />
+    <Compile Include="Mozilla\CallbackIntUint.cs" />
+    <Compile Include="Mozilla\CallbackOnAlertCheck.cs" />
+    <Compile Include="Mozilla\CallbackOnConfirm.cs" />
+    <Compile Include="Mozilla\CallbackOnConfirmCheck.cs" />
+    <Compile Include="Mozilla\CallbackOnConfirmEx.cs" />
+    <Compile Include="Mozilla\CallbackOnLocationChanged.cs" />
+    <Compile Include="Mozilla\CallbackOnProgress.cs" />
+    <Compile Include="Mozilla\CallbackOnPrompt.cs" />
+    <Compile Include="Mozilla\CallbackOnPromptPassword.cs" />
+    <Compile Include="Mozilla\CallbackOnPromptUsernameAndPassword.cs" />
+    <Compile Include="Mozilla\CallbackOnSecurityChange.cs" />
+    <Compile Include="Mozilla\CallbackOnSelect.cs" />
+    <Compile Include="Mozilla\CallbackOnShowContextMenu.cs" />
+    <Compile Include="Mozilla\CallbackOnStateChange.cs" />
+    <Compile Include="Mozilla\CallbackOnStatusChange.cs" />
+    <Compile Include="Mozilla\CallbackPtrPtr.cs" />
+    <Compile Include="Mozilla\CallbackString.cs" />
+    <Compile Include="Mozilla\CallbackStringInt.cs" />
+    <Compile Include="Mozilla\CallbackStringIntInt.cs" />
+    <Compile Include="Mozilla\CallbackStringIntUint.cs" />
+    <Compile Include="Mozilla\CallbackStringString.cs" />
+    <Compile Include="Mozilla\CallbackUint.cs" />
+    <Compile Include="Mozilla\CallbackUintInt.cs" />
+    <Compile Include="Mozilla\CallbackVoid.cs" />
+    <Compile Include="Mozilla\CallbackWString.cs" />
+    <Compile Include="Mozilla\CallbackWStringInt.cs" />
+    <Compile Include="Mozilla\DocumentEncoder.cs" />
+    <Compile Include="Mozilla\DOM\Attribute.cs" />
+    <Compile Include="Mozilla\DOM\AttributeCollection.cs" />
+    <Compile Include="Mozilla\DOM\ContentListener.cs" />
+    <Compile Include="Mozilla\DOM\Document.cs" />
+    <Compile Include="Mozilla\DOM\DocumentEncoderFlags.cs" />
+    <Compile Include="Mozilla\DOM\DocumentType.cs" />
+    <Compile Include="Mozilla\DOM\DOMImplementation.cs" />
+    <Compile Include="Mozilla\DOM\DOMObject.cs" />
+    <Compile Include="Mozilla\DOM\Element.cs" />
+    <Compile Include="Mozilla\DOM\EventListener.cs" />
+    <Compile Include="Mozilla\DOM\History.cs" />
+    <Compile Include="Mozilla\DOM\HTMLElement.cs" />
+    <Compile Include="Mozilla\DOM\HTMLElementCollection.cs" />
+    <Compile Include="Mozilla\DOM\NamedNodeMap.cs" />
+    <Compile Include="Mozilla\DOM\Navigation.cs" />
+    <Compile Include="Mozilla\DOM\Node.cs" />
+    <Compile Include="Mozilla\DOM\NodeList.cs" />
+    <Compile Include="Mozilla\DOM\NodeType.cs" />
+    <Compile Include="Mozilla\DOM\Stylesheet.cs" />
+    <Compile Include="Mozilla\DOM\StylesheetList.cs" />
+    <Compile Include="Mozilla\DOM\Window.cs" />
+    <Compile Include="Mozilla\DOM\WindowCollection.cs" />
+    <Compile Include="Mozilla\GenericCallback.cs" />
+    <Compile Include="Mozilla\KeyCallback.cs" />
+    <Compile Include="Mozilla\KeyInfo.cs" />
+    <Compile Include="Mozilla\ModifierKeys.cs" />
+    <Compile Include="Mozilla\MouseCallback.cs" />
+    <Compile Include="Mozilla\MouseInfo.cs" />
+    <Compile Include="Mozilla\nsAccessibilityService.cs" />
+    <Compile Include="Mozilla\nsAccessible.cs" />
+    <Compile Include="Mozilla\nsAccessibleDocument.cs" />
+    <Compile Include="Mozilla\nsAccessibleRelation.cs" />
+    <Compile Include="Mozilla\nsAccessibleRetrieval.cs" />
+    <Compile Include="Mozilla\nsAccessNode.cs" />
+    <Compile Include="Mozilla\nsArray.cs" />
+    <Compile Include="Mozilla\nsCancelable.cs" />
+    <Compile Include="Mozilla\nsChannel.cs" />
+    <Compile Include="Mozilla\nsClassInfo.cs" />
+    <Compile Include="Mozilla\nsDocCharset.cs" />
+    <Compile Include="Mozilla\nsDocumentEncoder.cs" />
+    <Compile Include="Mozilla\nsDocumentEncoderNodeFixup.cs" />
+    <Compile Include="Mozilla\nsDOMAbstractView.cs" />
+    <Compile Include="Mozilla\nsDOMAttr.cs" />
+    <Compile Include="Mozilla\nsDOMBarProp.cs" />
+    <Compile Include="Mozilla\nsDOMCDATASection.cs" />
+    <Compile Include="Mozilla\nsDOMCharacterData.cs" />
+    <Compile Include="Mozilla\nsDOMComment.cs" />
+    <Compile Include="Mozilla\nsDOMCounter.cs" />
+    <Compile Include="Mozilla\nsDOMCSSPrimitiveValue.cs" />
+    <Compile Include="Mozilla\nsDOMCSSRule.cs" />
+    <Compile Include="Mozilla\nsDOMCSSRuleList.cs" />
+    <Compile Include="Mozilla\nsDOMCSSStyleDeclaration.cs" />
+    <Compile Include="Mozilla\nsDOMCSSStyleSheet.cs" />
+    <Compile Include="Mozilla\nsDOMCSSValue.cs" />
+    <Compile Include="Mozilla\nsDOMDocument.cs" />
+    <Compile Include="Mozilla\nsDOMDocumentEvent.cs" />
+    <Compile Include="Mozilla\nsDOMDocumentFragment.cs" />
+    <Compile Include="Mozilla\nsDOMDocumentRange.cs" />
+    <Compile Include="Mozilla\nsDOMDocumentStyle.cs" />
+    <Compile Include="Mozilla\nsDOMDocumentType.cs" />
+    <Compile Include="Mozilla\nsDOMDocumentView.cs" />
+    <Compile Include="Mozilla\nsDOMDOMImplementation.cs" />
+    <Compile Include="Mozilla\nsDOMDOMStringList.cs" />
+    <Compile Include="Mozilla\nsDOMElement.cs" />
+    <Compile Include="Mozilla\nsDOMEntityReference.cs" />
+    <Compile Include="Mozilla\nsDOMEvent.cs" />
+    <Compile Include="Mozilla\nsDOMEventListener.cs" />
+    <Compile Include="Mozilla\nsDOMEventTarget.cs" />
+    <Compile Include="Mozilla\nsDOMHTMLBodyElement.cs" />
+    <Compile Include="Mozilla\nsDOMHTMLCollection.cs" />
+    <Compile Include="Mozilla\nsDOMHTMLDocument.cs" />
+    <Compile Include="Mozilla\nsDOMHTMLElement.cs" />
+    <Compile Include="Mozilla\nsDOMHTMLStyleElement.cs" />
+    <Compile Include="Mozilla\nsDOMKeyEvent.cs" />
+    <Compile Include="Mozilla\nsDOMMediaList.cs" />
+    <Compile Include="Mozilla\nsDOMMouseEvent.cs" />
+    <Compile Include="Mozilla\nsDOMNamedNodeMap.cs" />
+    <Compile Include="Mozilla\nsDOMNode.cs" />
+    <Compile Include="Mozilla\nsDOMNodeList.cs" />
+    <Compile Include="Mozilla\nsDOMNSHTMLElement.cs" />
+    <Compile Include="Mozilla\nsDOMNSRange.cs" />
+    <Compile Include="Mozilla\nsDOMProcessingInstruction.cs" />
+    <Compile Include="Mozilla\nsDOMRange.cs" />
+    <Compile Include="Mozilla\nsDOMRect.cs" />
+    <Compile Include="Mozilla\nsDOMRGBColor.cs" />
+    <Compile Include="Mozilla\nsDOMStyleSheet.cs" />
+    <Compile Include="Mozilla\nsDOMStyleSheetList.cs" />
+    <Compile Include="Mozilla\nsDOMText.cs" />
+    <Compile Include="Mozilla\nsDOMUIEvent.cs" />
+    <Compile Include="Mozilla\nsDOMViewCSS.cs" />
+    <Compile Include="Mozilla\nsDOMWindow.cs" />
+    <Compile Include="Mozilla\nsDOMWindowCollection.cs" />
+    <Compile Include="Mozilla\nsErrorService.cs" />
+    <Compile Include="Mozilla\nsFile.cs" />
+    <Compile Include="Mozilla\nsHistoryEntry.cs" />
+    <Compile Include="Mozilla\nsIAccessibilityService.cs" />
+    <Compile Include="Mozilla\nsIAccessible.cs" />
+    <Compile Include="Mozilla\nsIAccessibleDocument.cs" />
+    <Compile Include="Mozilla\nsIAccessibleRelation.cs" />
+    <Compile Include="Mozilla\nsIAccessibleRetrieval.cs" />
+    <Compile Include="Mozilla\nsIAccessNode.cs" />
+    <Compile Include="Mozilla\nsIArray.cs" />
+    <Compile Include="Mozilla\nsICancelable.cs" />
+    <Compile Include="Mozilla\nsIChannel.cs" />
+    <Compile Include="Mozilla\nsIClassInfo.cs" />
+    <Compile Include="Mozilla\nsIDocCharset.cs" />
+    <Compile Include="Mozilla\nsIDocumentEncoder.cs" />
+    <Compile Include="Mozilla\nsIDocumentEncoderNodeFixup.cs" />
+    <Compile Include="Mozilla\nsIDOMAbstractView.cs" />
+    <Compile Include="Mozilla\nsIDOMAttr.cs" />
+    <Compile Include="Mozilla\nsIDOMBarProp.cs" />
+    <Compile Include="Mozilla\nsIDOMCDATASection.cs" />
+    <Compile Include="Mozilla\nsIDOMCharacterData.cs" />
+    <Compile Include="Mozilla\nsIDOMComment.cs" />
+    <Compile Include="Mozilla\nsIDOMCounter.cs" />
+    <Compile Include="Mozilla\nsIDOMCSSPrimitiveValue.cs" />
+    <Compile Include="Mozilla\nsIDOMCSSRule.cs" />
+    <Compile Include="Mozilla\nsIDOMCSSRuleList.cs" />
+    <Compile Include="Mozilla\nsIDOMCSSStyleDeclaration.cs" />
+    <Compile Include="Mozilla\nsIDOMCSSStyleSheet.cs" />
+    <Compile Include="Mozilla\nsIDOMCSSValue.cs" />
+    <Compile Include="Mozilla\nsIDOMDocument.cs" />
+    <Compile Include="Mozilla\nsIDOMDocumentEvent.cs" />
+    <Compile Include="Mozilla\nsIDOMDocumentFragment.cs" />
+    <Compile Include="Mozilla\nsIDOMDocumentRange.cs" />
+    <Compile Include="Mozilla\nsIDOMDocumentStyle.cs" />
+    <Compile Include="Mozilla\nsIDOMDocumentType.cs" />
+    <Compile Include="Mozilla\nsIDOMDocumentView.cs" />
+    <Compile Include="Mozilla\nsIDOMDOMImplementation.cs" />
+    <Compile Include="Mozilla\nsIDOMDOMStringList.cs" />
+    <Compile Include="Mozilla\nsIDOMElement.cs" />
+    <Compile Include="Mozilla\nsIDOMEntityReference.cs" />
+    <Compile Include="Mozilla\nsIDOMEvent.cs" />
+    <Compile Include="Mozilla\nsIDOMEventListener.cs" />
+    <Compile Include="Mozilla\nsIDOMEventTarget.cs" />
+    <Compile Include="Mozilla\nsIDOMHTMLBodyElement.cs" />
+    <Compile Include="Mozilla\nsIDOMHTMLCollection.cs" />
+    <Compile Include="Mozilla\nsIDOMHTMLDocument.cs" />
+    <Compile Include="Mozilla\nsIDOMHTMLElement.cs" />
+    <Compile Include="Mozilla\nsIDOMHTMLStyleElement.cs" />
+    <Compile Include="Mozilla\nsIDOMKeyEvent.cs" />
+    <Compile Include="Mozilla\nsIDOMMediaList.cs" />
+    <Compile Include="Mozilla\nsIDOMMouseEvent.cs" />
+    <Compile Include="Mozilla\nsIDOMNamedNodeMap.cs" />
+    <Compile Include="Mozilla\nsIDOMNode.cs" />
+    <Compile Include="Mozilla\nsIDOMNodeList.cs" />
+    <Compile Include="Mozilla\nsIDOMNSHTMLElement.cs" />
+    <Compile Include="Mozilla\nsIDOMNSRange.cs" />
+    <Compile Include="Mozilla\nsIDOMProcessingInstruction.cs" />
+    <Compile Include="Mozilla\nsIDOMRange.cs" />
+    <Compile Include="Mozilla\nsIDOMRect.cs" />
+    <Compile Include="Mozilla\nsIDOMRGBColor.cs" />
+    <Compile Include="Mozilla\nsIDOMStyleSheet.cs" />
+    <Compile Include="Mozilla\nsIDOMStyleSheetList.cs" />
+    <Compile Include="Mozilla\nsIDOMText.cs" />
+    <Compile Include="Mozilla\nsIDOMUIEvent.cs" />
+    <Compile Include="Mozilla\nsIDOMViewCSS.cs" />
+    <Compile Include="Mozilla\nsIDOMWindow.cs" />
+    <Compile Include="Mozilla\nsIDOMWindowCollection.cs" />
+    <Compile Include="Mozilla\nsIErrorService.cs" />
+    <Compile Include="Mozilla\nsIFile.cs" />
+    <Compile Include="Mozilla\nsIHistoryEntry.cs" />
+    <Compile Include="Mozilla\nsIInputStream.cs" />
+    <Compile Include="Mozilla\nsIInterfaceRequestor.cs" />
+    <Compile Include="Mozilla\nsIIOService.cs" />
+    <Compile Include="Mozilla\nsILoadGroup.cs" />
+    <Compile Include="Mozilla\nsInputStream.cs" />
+    <Compile Include="Mozilla\nsInterfaceRequestor.cs" />
+    <Compile Include="Mozilla\nsIObserver.cs" />
+    <Compile Include="Mozilla\nsIOService.cs" />
+    <Compile Include="Mozilla\nsIOutputStream.cs" />
+    <Compile Include="Mozilla\nsIPersistentProperties.cs" />
+    <Compile Include="Mozilla\nsIPrefBranch.cs" />
+    <Compile Include="Mozilla\nsIPrefService.cs" />
+    <Compile Include="Mozilla\nsIProperties.cs" />
+    <Compile Include="Mozilla\nsIProtocolHandler.cs" />
+    <Compile Include="Mozilla\nsIReadSegmentFunDelegate.cs" />
+    <Compile Include="Mozilla\nsIRequest.cs" />
+    <Compile Include="Mozilla\nsIRequestObserver.cs" />
+    <Compile Include="Mozilla\nsISelection.cs" />
+    <Compile Include="Mozilla\nsIServiceManager.cs" />
+    <Compile Include="Mozilla\nsISHistory.cs" />
+    <Compile Include="Mozilla\nsISHistoryListener.cs" />
+    <Compile Include="Mozilla\nsISimpleEnumerator.cs" />
+    <Compile Include="Mozilla\nsIStreamListener.cs" />
+    <Compile Include="Mozilla\nsITimer.cs" />
+    <Compile Include="Mozilla\nsITimerCallback.cs" />
+    <Compile Include="Mozilla\nsITimerCallbackDelegate.cs" />
+    <Compile Include="Mozilla\nsIURI.cs" />
+    <Compile Include="Mozilla\nsIURIContentListener.cs" />
+    <Compile Include="Mozilla\nsIWeakReference.cs" />
+    <Compile Include="Mozilla\nsIWebBrowser.cs" />
+    <Compile Include="Mozilla\nsIWebBrowserChrome.cs" />
+    <Compile Include="Mozilla\nsIWebBrowserChromeFocus.cs" />
+    <Compile Include="Mozilla\nsIWebBrowserFocus.cs" />
+    <Compile Include="Mozilla\nsIWebBrowserPersist.cs" />
+    <Compile Include="Mozilla\nsIWebBrowserStream.cs" />
+    <Compile Include="Mozilla\nsIWebNavigation.cs" />
+    <Compile Include="Mozilla\nsIWebProgress.cs" />
+    <Compile Include="Mozilla\nsIWebProgressListener.cs" />
+    <Compile Include="Mozilla\nsIWriteSegmentFunDelegate.cs" />
+    <Compile Include="Mozilla\nsLoadGroup.cs" />
+    <Compile Include="Mozilla\nsObserver.cs" />
+    <Compile Include="Mozilla\nsOutputStream.cs" />
+    <Compile Include="Mozilla\nsPersistentProperties.cs" />
+    <Compile Include="Mozilla\nsPrefBranch.cs" />
+    <Compile Include="Mozilla\nsPrefService.cs" />
+    <Compile Include="Mozilla\nsProperties.cs" />
+    <Compile Include="Mozilla\nsProtocolHandler.cs" />
+    <Compile Include="Mozilla\nsRequest.cs" />
+    <Compile Include="Mozilla\nsRequestObserver.cs" />
+    <Compile Include="Mozilla\nsSelection.cs" />
+    <Compile Include="Mozilla\nsServiceManager.cs" />
+    <Compile Include="Mozilla\nsSHistory.cs" />
+    <Compile Include="Mozilla\nsSHistoryListener.cs" />
+    <Compile Include="Mozilla\nsSimpleEnumerator.cs" />
+    <Compile Include="Mozilla\nsStreamListener.cs" />
+    <Compile Include="Mozilla\nsTimer.cs" />
+    <Compile Include="Mozilla\nsTimerCallback.cs" />
+    <Compile Include="Mozilla\nsURI.cs" />
+    <Compile Include="Mozilla\nsURIContentListener.cs" />
+    <Compile Include="Mozilla\nsWeakReference.cs" />
+    <Compile Include="Mozilla\nsWebBrowser.cs" />
+    <Compile Include="Mozilla\nsWebBrowserChrome.cs" />
+    <Compile Include="Mozilla\nsWebBrowserChromeFocus.cs" />
+    <Compile Include="Mozilla\nsWebBrowserFocus.cs" />
+    <Compile Include="Mozilla\nsWebBrowserPersist.cs" />
+    <Compile Include="Mozilla\nsWebBrowserStream.cs" />
+    <Compile Include="Mozilla\nsWebNavigation.cs" />
+    <Compile Include="Mozilla\nsWebProgress.cs" />
+    <Compile Include="Mozilla\nsWebProgressListener.cs" />
+    <Compile Include="Mozilla\SizeInfo.cs" />
+    <Compile Include="Mozilla\StateFlags.cs" />
+    <Compile Include="Mozilla\StopOption.cs" />
+    <Compile Include="Mozilla\Stream.cs" />
+    <Compile Include="Mozilla\UniString.cs" />
+    <Compile Include="Mozilla\WebBrowser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebBrowser\AlertEventArgs.cs" />
+    <Compile Include="WebBrowser\AlertEventHandler.cs" />
+    <Compile Include="WebBrowser\ContextMenuEventArgs.cs" />
+    <Compile Include="WebBrowser\ContextMenuEventHandler.cs" />
+    <Compile Include="WebBrowser\CreateNewWindowEventArgs.cs" />
+    <Compile Include="WebBrowser\CreateNewWindowEventHandler.cs" />
+    <Compile Include="WebBrowser\DialogButtonFlags.cs" />
+    <Compile Include="WebBrowser\DialogType.cs" />
+    <Compile Include="WebBrowser\DOM\IAttribute.cs" />
+    <Compile Include="WebBrowser\DOM\IAttributeCollection.cs" />
+    <Compile Include="WebBrowser\DOM\IDocument.cs" />
+    <Compile Include="WebBrowser\DOM\IDocumentType.cs" />
+    <Compile Include="WebBrowser\DOM\IDOMImplementation.cs" />
+    <Compile Include="WebBrowser\DOM\IElement.cs" />
+    <Compile Include="WebBrowser\DOM\IElementCollection.cs" />
+    <Compile Include="WebBrowser\DOM\IHistory.cs" />
+    <Compile Include="WebBrowser\DOM\IMediaList.cs" />
+    <Compile Include="WebBrowser\DOM\INamedNodeMap.cs" />
+    <Compile Include="WebBrowser\DOM\INavigation.cs" />
+    <Compile Include="WebBrowser\DOM\INode.cs" />
+    <Compile Include="WebBrowser\DOM\INodeList.cs" />
+    <Compile Include="WebBrowser\DOM\IStylesheet.cs" />
+    <Compile Include="WebBrowser\DOM\IStylesheetList.cs" />
+    <Compile Include="WebBrowser\DOM\IWindow.cs" />
+    <Compile Include="WebBrowser\DOM\IWindowCollection.cs" />
+    <Compile Include="WebBrowser\DOM\LoadFlags.cs" />
+    <Compile Include="WebBrowser\DOM\NodeEventArgs.cs" />
+    <Compile Include="WebBrowser\DOM\NodeEventHandler.cs" />
+    <Compile Include="WebBrowser\DOM\NodeType.cs" />
+    <Compile Include="WebBrowser\DOM\WindowEventArgs.cs" />
+    <Compile Include="WebBrowser\DOM\WindowEventHandler.cs" />
+    <Compile Include="WebBrowser\Exception.cs" />
+    <Compile Include="WebBrowser\FocusOption.cs" />
+    <Compile Include="WebBrowser\IWebBrowser.cs" />
+    <Compile Include="WebBrowser\LoadCommitedEventArgs.cs" />
+    <Compile Include="WebBrowser\LoadCommitedEventHandler.cs" />
+    <Compile Include="WebBrowser\LoadFinishedEventArgs.cs" />
+    <Compile Include="WebBrowser\LoadFinishedEventHandler.cs" />
+    <Compile Include="WebBrowser\LoadStartedEventArgs.cs" />
+    <Compile Include="WebBrowser\LoadStartedEventHandler.cs" />
+    <Compile Include="WebBrowser\Manager.cs" />
+    <Compile Include="WebBrowser\NavigationRequestedEventArgs.cs" />
+    <Compile Include="WebBrowser\NavigationRequestedEventHandler.cs" />
+    <Compile Include="WebBrowser\Platform.cs" />
+    <Compile Include="WebBrowser\ProgressChangedEventArgs.cs" />
+    <Compile Include="WebBrowser\ProgressChangedEventHandler.cs" />
+    <Compile Include="WebBrowser\ReloadOption.cs" />
+    <Compile Include="WebBrowser\SecurityChangedEventArgs.cs" />
+    <Compile Include="WebBrowser\SecurityChangedEventHandler.cs" />
+    <Compile Include="WebBrowser\SecurityLevel.cs" />
+    <Compile Include="WebBrowser\StatusChangedEventArgs.cs" />
+    <Compile Include="WebBrowser\StatusChangedEventHandler.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
